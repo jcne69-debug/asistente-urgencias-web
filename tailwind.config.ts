@@ -11,6 +11,10 @@ export default {
         sm: ".1875rem", /* 3px */
       },
       colors: {
+        whatsapp: {
+          DEFAULT: "hsl(142 70% 49% / <alpha-value>)",
+          dark: "hsl(142 70% 40% / <alpha-value>)",
+        },
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
