@@ -60,11 +60,10 @@ export default function Home() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Nunca Pierdas Otra Llamada Importante
+            El Asistente Virtual para Autónomos
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Tu asistente personal de voz atiende tus llamadas urgentes cuando estás ocupado,
-            recoge toda la información necesaria y te envía un resumen completo por WhatsApp
+            Nunca pierdas una llamada importante. Tu asistente de voz profesional atiende cada cliente cuando estás ocupado trabajando, recoge toda la información y te la envía por WhatsApp al instante.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contacto">
@@ -93,7 +92,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-background" data-testid="section-que-es">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            ¿Qué es Asistente-Urgencias Personal?
+            ¿Qué es Asistente-Urgencias Personal para Autónomos?
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Es un servicio profesional de asistente de voz automatizado diseñado específicamente
@@ -108,7 +107,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-card" data-testid="section-como-funciona">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            ¿Cómo Funciona?
+            ¿Cómo Funciona para tu Negocio?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {steps.map((step) => (
