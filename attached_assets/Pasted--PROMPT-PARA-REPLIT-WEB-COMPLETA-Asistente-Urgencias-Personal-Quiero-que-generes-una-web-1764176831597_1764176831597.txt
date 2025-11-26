@@ -1,0 +1,116 @@
+# **PROMPT PARA REPLIT – WEB COMPLETA “Asistente-Urgencias Personal”**
+
+**Quiero que generes una web completa, moderna, funcional y responsive, basada en HTML + CSS + JS (sin frameworks), con todas sus páginas creadas y enlazadas.
+La web debe ofrecer servicios para autónomos que quieren instalar un “Asistente-Urgencias Personal”: un asistente de voz que atiende sus llamadas cuando están ocupados, recoge los datos del cliente y envía un WhatsApp al profesional.**
+
+## **ESTILO GENERAL**
+
+* Diseño moderno, limpio y profesional.
+* Paleta en tonos azul oscuro + verde WhatsApp.
+* Tipografía simple y elegante (por ejemplo, Inter o Roboto).
+* Todo centrado en móvil (mobile-first).
+* Encabezados claros, botones visibles y textos cortos.
+
+## **ESTRUCTURA DE LA WEB**
+
+Crea todos estos archivos y enlázalos entre ellos:
+
+### **1. index.html (Inicio)**
+
+Incluye:
+
+* Encabezado con logo “Asistente-Urgencias Personal”.
+* Secciones:
+
+  * **Hero:** frase potente “Nunca pierdas otra llamada importante”.
+  * **Qué es el servicio:** breve explicación.
+  * **Cómo funciona:**
+
+    1. Cliente llama.
+    2. Si no contestas, salta tu asistente.
+    3. Recoge nombre, teléfono, urgencia, localidad y horario.
+    4. Te llega WhatsApp con el resumen.
+  * **Botón CTA:** “Quiero instalar mi asistente”.
+* Footer simple con enlaces a:
+
+  * Servicios
+  * Precios
+  * Preguntas frecuentes
+  * Contacto
+  * Política de privacidad
+  * Términos y condiciones
+
+### **2. servicios.html**
+
+Sección explicando:
+
+* Instalación del asistente de urgencias.
+* Gestión de llamadas perdidas.
+* Automatización total.
+* Integración con WhatsApp, Vapi, UltraMSG, Sonetel o similar.
+* Beneficios: velocidad, profesionalidad, cero llamadas perdidas.
+  Botón: **“Solicitar instalación”** (lleva a contacto).
+
+### **3. precios.html**
+
+Plan simple:
+
+* **Plan Autónomo:**
+
+  * Asistente personal 24/7
+  * Un número SIP o desvío
+  * Configuración del asistente
+  * WhatsApp automático
+  * Soporte
+  * Precio: “Consultar”
+    Botón: **“Pedir presupuesto”**.
+
+### **4. faq.html**
+
+Preguntas y respuestas claras, por ejemplo:
+
+* ¿Necesito cambiar mi número?
+* ¿Qué ocurre si estoy disponible?
+* ¿Cómo llega el resumen por WhatsApp?
+* ¿Qué datos recoge el asistente?
+* ¿Puedo tener varios asistentes?
+
+### **5. contacto.html**
+
+Formulario funcional (solo frontend):
+
+* Nombre
+* Teléfono
+* Email
+* Mensaje
+  Botón “Enviar”.
+  (Indica claramente que es formulario sin backend).
+
+### **6. politicas.html**
+
+Texto genérico de política de privacidad (crea uno base para rellenar después).
+
+### **7. terminos.html**
+
+Términos y condiciones básicos.
+
+## **FUNCIONALIDAD**
+
+* Menú superior fijo con navegación entre todas las páginas.
+* Botones funcionando correctamente.
+* Diseño responsive.
+* Animación ligera en botones y hover.
+* Iconos simples (FontAwesome).
+
+## **OBJETIVO CLAVE**
+
+Construir una web clara, directa y profesional, enfocada a vender un servicio: **Instalación del Asistente-Urgencias Personal para autónomos**.
+
+## **ENTREGA**
+
+* Genera todos los archivos HTML.
+* Genera un único archivo `styles.css`.
+* Genera un archivo `script.js`.
+* Asegúrate de que todo queda funcional y enlazado.
+
+
