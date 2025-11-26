@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import {
-  Phone,
-  MessageSquare,
-  Settings,
-  Headphones,
+  PhoneIncoming,
+  Sparkles,
+  ListChecks,
+  MessagesSquare,
   CheckCircle2,
-  Smartphone,
+  Mic,
 } from "lucide-react";
 import whatsappMockup from "@assets/generated_images/whatsapp_urgent_call_summary.png";
 import callScreen from "@assets/generated_images/incoming_call_interface_screen.png";
@@ -16,7 +16,7 @@ import callScreen from "@assets/generated_images/incoming_call_interface_screen.
 export default function Servicios() {
   const services = [
     {
-      icon: Phone,
+      icon: PhoneIncoming,
       title: "Instalación del Asistente de Urgencias",
       description:
         "Configuramos un asistente de voz personalizado que refleja la identidad de tu negocio y atiende llamadas con profesionalidad.",
@@ -27,7 +27,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: MessageSquare,
+      icon: Sparkles,
       title: "Gestión Inteligente de Llamadas",
       description:
         "Nuestro sistema detecta cuando no puedes atender y activa automáticamente tu asistente para no perder ninguna oportunidad.",
@@ -38,7 +38,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: Settings,
+      icon: ListChecks,
       title: "Automatización Total",
       description:
         "Todo el proceso funciona sin que tengas que hacer nada. Desde la llamada hasta el resumen en tu WhatsApp.",
@@ -49,7 +49,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: Smartphone,
+      icon: MessagesSquare,
       title: "Integración con WhatsApp",
       description:
         "Recibe resúmenes detallados de cada llamada directamente en WhatsApp, listos para que respondas cuando puedas.",
@@ -60,7 +60,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: Headphones,
+      icon: Mic,
       title: "Soporte Técnico Continuo",
       description:
         "Nuestro equipo está disponible para ayudarte con cualquier ajuste o pregunta sobre tu asistente.",

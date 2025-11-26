@@ -3,14 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import {
-  Phone,
-  MessageSquare,
-  Bell,
-  Send,
-  Clock,
-  Shield,
-  Zap,
-  CheckCircle2,
+  PhoneIncoming,
+  Bot,
+  ListChecks,
+  MessagesSquare,
+  Infinity,
+  Bolt,
+  Award,
 } from "lucide-react";
 import heroImage from "@assets/generated_images/hispanic_tradesperson_answering_phone.png";
 
@@ -18,25 +17,25 @@ export default function Home() {
   const steps = [
     {
       number: "1",
-      icon: Phone,
+      icon: PhoneIncoming,
       title: "Cliente llama",
       description: "Tu cliente intenta contactarte mientras estás ocupado trabajando",
     },
     {
       number: "2",
-      icon: Bell,
+      icon: Bot,
       title: "Asistente responde",
       description: "Si no contestas, tu asistente de voz personalizado atiende automáticamente",
     },
     {
       number: "3",
-      icon: MessageSquare,
+      icon: ListChecks,
       title: "Recoge datos",
       description: "Recopila nombre, teléfono, urgencia, localidad y horario preferido",
     },
     {
       number: "4",
-      icon: Send,
+      icon: MessagesSquare,
       title: "WhatsApp instantáneo",
       description: "Recibes un resumen completo por WhatsApp para actuar de inmediato",
     },
@@ -44,17 +43,17 @@ export default function Home() {
 
   const benefits = [
     {
-      icon: Clock,
+      icon: Infinity,
       title: "Disponible 24/7",
       description: "Tu asistente nunca duerme ni se toma descansos",
     },
     {
-      icon: Zap,
+      icon: Bolt,
       title: "Respuesta instantánea",
       description: "Cada llamada es atendida en segundos",
     },
     {
-      icon: Shield,
+      icon: Award,
       title: "100% profesional",
       description: "Trato amable y recopilación precisa de datos",
     },

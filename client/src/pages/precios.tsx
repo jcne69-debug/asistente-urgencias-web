@@ -2,24 +2,24 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle2, Phone, MessageSquare, Headphones, Clock } from "lucide-react";
+import { CheckCircle2, PhoneIncoming, MessagesSquare, Infinity, Mic } from "lucide-react";
 
 export default function Precios() {
   const features = [
     {
-      icon: Phone,
+      icon: PhoneIncoming,
       text: "Asistente personal de voz 24/7",
     },
     {
-      icon: MessageSquare,
+      icon: MessagesSquare,
       text: "Notificaciones por WhatsApp",
     },
     {
-      icon: Clock,
+      icon: Infinity,
       text: "Configuración del asistente personalizado",
     },
     {
-      icon: Headphones,
+      icon: Mic,
       text: "Soporte técnico continuo",
     },
   ];
