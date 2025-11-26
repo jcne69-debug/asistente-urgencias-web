@@ -100,8 +100,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/60">
-          <p>&copy; {new Date().getFullYear()} Asistente-Urgencias Personal. Todos los derechos reservados.</p>
+        <div>
+          <Link 
+            href="/aviso-legal" 
+            className="text-white/80 hover:text-white transition-colors inline-block"
+            data-testid="link-footer-aviso-legal"
+          >
+            Aviso Legal
+          </Link>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <p className="text-center text-white/60 mb-4">&copy; {new Date().getFullYear()} Asistente-Urgencias Personal para Autónomos. Todos los derechos reservados.</p>
+          <p className="text-center text-white/60 text-sm">Email: jcne69@gmail.com</p>
+          <p className="text-center text-white/60 text-sm mt-2">Servicio gestionado por Inteligencia Artificial + Automatizaciones</p>
         </div>
       </div>
     </footer>

@@ -18,142 +18,48 @@ export default function Terminos() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg max-w-none">
           <div className="space-y-8 text-foreground">
             <div>
-              <h2 className="text-2xl font-bold mb-4">1. Aceptación de los Términos</h2>
+              <h2 className="text-2xl font-bold mb-4">Términos y Condiciones del Servicio</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Al contratar el servicio de Asistente-Urgencias Personal, aceptas estos términos y condiciones en su
-                totalidad. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro servicio.
+                El servicio "Asistente-Urgencias Personal" permite que un asistente virtual atienda llamadas en nombre del autónomo cuando este no pueda contestar.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">2. Descripción del Servicio</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Asistente-Urgencias Personal proporciona un servicio de asistente de voz automatizado que:
-              </p>
+              <h2 className="text-2xl font-bold mb-4">Qué Incluye el Servicio</h2>
               <ul className="list-disc pl-6 mt-3 text-muted-foreground space-y-2">
-                <li>Atiende llamadas entrantes cuando no puedes responder personalmente</li>
-                <li>Recopila información del cliente mediante conversación automatizada</li>
-                <li>Envía resúmenes de las llamadas a tu número de WhatsApp</li>
-                <li>Opera 24 horas al día, 7 días a la semana</li>
+                <li>Atención automática de llamadas configuradas por el autónomo.</li>
+                <li>Recogida de datos básicos del cliente que llama.</li>
+                <li>Envío automático de la información por WhatsApp al autónomo.</li>
               </ul>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">3. Requisitos y Elegibilidad</h2>
+              <h2 className="text-2xl font-bold mb-4">Responsabilidades</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Para utilizar nuestro servicio debes:
+                El titular no asume responsabilidad sobre la veracidad de la información proporcionada por quienes llaman ni de las decisiones posteriores del autónomo.
               </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Limitaciones</h2>
               <ul className="list-disc pl-6 mt-3 text-muted-foreground space-y-2">
-                <li>Ser mayor de 18 años o actuar en nombre de una empresa legalmente constituida</li>
-                <li>Proporcionar información precisa y completa durante el registro</li>
-                <li>Mantener la confidencialidad de tus credenciales de acceso</li>
-                <li>Disponer de un número de teléfono y WhatsApp activos</li>
+                <li>Este servicio no sustituye la obligación del autónomo de responder a sus clientes cuando sea posible.</li>
+                <li>El asistente no realiza diagnósticos ni presta servicios profesionales; solo recoge información.</li>
               </ul>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">4. Uso Aceptable</h2>
+              <h2 className="text-2xl font-bold mb-4">Precio y Pagos</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Te comprometes a utilizar el servicio únicamente para fines comerciales legítimos y profesionales.
-                Está prohibido:
-              </p>
-              <ul className="list-disc pl-6 mt-3 text-muted-foreground space-y-2">
-                <li>Usar el servicio para actividades ilegales o fraudulentas</li>
-                <li>Intentar acceder, modificar o interferir con los sistemas del servicio</li>
-                <li>Revender o redistribuir el servicio sin autorización expresa</li>
-                <li>Utilizar el servicio de manera que pueda dañar, sobrecargar o perjudicar la infraestructura</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">5. Pago y Facturación</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Los términos de pago se acuerdan individualmente con cada cliente según el plan contratado:
-              </p>
-              <ul className="list-disc pl-6 mt-3 text-muted-foreground space-y-2">
-                <li>Los precios se comunicarán claramente antes de la contratación</li>
-                <li>La facturación se realiza mensualmente por adelantado</li>
-                <li>Los pagos deben realizarse en las fechas acordadas</li>
-                <li>El retraso en el pago puede resultar en la suspensión del servicio</li>
-                <li>Los precios pueden modificarse con un aviso previo de 30 días</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">6. Cancelación y Reembolsos</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Política de cancelación:
-              </p>
-              <ul className="list-disc pl-6 mt-3 text-muted-foreground space-y-2">
-                <li>Puedes cancelar el servicio en cualquier momento con un aviso previo de 15 días</li>
-                <li>No se realizan reembolsos por períodos ya facturados</li>
-                <li>Tras la cancelación, el servicio permanecerá activo hasta el final del período pagado</li>
-                <li>Nos reservamos el derecho de suspender o cancelar cuentas que violen estos términos</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">7. Disponibilidad del Servicio</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Nos esforzamos por mantener el servicio disponible en todo momento, pero:
-              </p>
-              <ul className="list-disc pl-6 mt-3 text-muted-foreground space-y-2">
-                <li>No garantizamos un tiempo de actividad del 100%</li>
-                <li>Puede haber interrupciones por mantenimiento programado (notificado con antelación)</li>
-                <li>No somos responsables de interrupciones causadas por terceros o circunstancias fuera de nuestro control</li>
-                <li>En caso de problemas técnicos, trabajaremos para resolverlos lo antes posible</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">8. Limitación de Responsabilidad</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                En la medida permitida por la ley:
-              </p>
-              <ul className="list-disc pl-6 mt-3 text-muted-foreground space-y-2">
-                <li>El servicio se proporciona "tal cual" sin garantías de ningún tipo</li>
-                <li>No somos responsables de pérdidas económicas derivadas de llamadas no atendidas o mal gestionadas</li>
-                <li>Nuestra responsabilidad máxima se limita al importe pagado por el servicio en los últimos 3 meses</li>
-                <li>No garantizamos que el servicio sea ininterrumpido o libre de errores</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">9. Propiedad Intelectual</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Todos los derechos de propiedad intelectual del servicio, incluyendo software, diseño, contenido y
-                marca, pertenecen a Asistente-Urgencias Personal. No se concede ninguna licencia o derecho más allá
-                del uso del servicio según estos términos.
+                Las tarifas y condiciones económicas se acordarán individualmente con cada autónomo.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">10. Modificaciones de los Términos</h2>
+              <h2 className="text-2xl font-bold mb-4">Cancelación</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios significativos
-                se notificarán con al menos 30 días de antelación. El uso continuado del servicio después de las
-                modificaciones constituye la aceptación de los nuevos términos.
+                El usuario puede solicitar la baja del servicio en cualquier momento por WhatsApp o email.
               </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">11. Ley Aplicable y Jurisdicción</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Estos términos se rigen por las leyes de España. Cualquier disputa se resolverá en los tribunales
-                de Madrid, España.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-4">12. Contacto</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Para preguntas sobre estos términos y condiciones, contáctanos en:
-              </p>
-              <ul className="list-none mt-3 text-muted-foreground space-y-2">
-                <li>Email: info@asistente-urgencias.es</li>
-                <li>Teléfono: +34 900 123 456</li>
-                <li>Dirección: Madrid, España</li>
-              </ul>
             </div>
 
             <div className="mt-8 pt-8 border-t border-border">

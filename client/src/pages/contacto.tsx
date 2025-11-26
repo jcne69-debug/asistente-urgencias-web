@@ -12,6 +12,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactMessageSchema, type InsertContactMessage } from "@shared/schema";
@@ -30,6 +37,7 @@ export default function Contacto() {
       name: "",
       phone: "",
       email: "",
+      activityType: "",
       message: "",
     },
   });
@@ -151,6 +159,48 @@ export default function Contacto() {
                                 disabled={mutation.isPending}
                               />
                             </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="activityType"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Tipo de Actividad</FormLabel>
+                            <Select
+                              value={field.value}
+                              onValueChange={field.onChange}
+                              disabled={mutation.isPending}
+                            >
+                              <FormControl>
+                                <SelectTrigger data-testid="select-activity-type">
+                                  <SelectValue placeholder="Selecciona tu profesión" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="fontanero">Fontanero</SelectItem>
+                                <SelectItem value="electricista">Electricista</SelectItem>
+                                <SelectItem value="cerrajero">Cerrajero</SelectItem>
+                                <SelectItem value="albañil">Albañil</SelectItem>
+                                <SelectItem value="pintor">Pintor</SelectItem>
+                                <SelectItem value="carpintero">Carpintero</SelectItem>
+                                <SelectItem value="soldador">Soldador</SelectItem>
+                                <SelectItem value="mecanico">Mecánico</SelectItem>
+                                <SelectItem value="reparador">Reparador de Electrodomésticos</SelectItem>
+                                <SelectItem value="limpiador">Servicio de Limpieza</SelectItem>
+                                <SelectItem value="consultor">Consultor</SelectItem>
+                                <SelectItem value="profesor">Profesor Particular</SelectItem>
+                                <SelectItem value="peluquero">Peluquero</SelectItem>
+                                <SelectItem value="masajista">Masajista</SelectItem>
+                                <SelectItem value="veterinario">Veterinario</SelectItem>
+                                <SelectItem value="abogado">Abogado</SelectItem>
+                                <SelectItem value="contador">Contador</SelectItem>
+                                <SelectItem value="otro">Otro</SelectItem>
+                              </SelectContent>
+                            </Select>
                             <FormMessage />
                           </FormItem>
                         )}

@@ -22,6 +22,7 @@ export const contactMessages = pgTable("contact_messages", {
   name: text("name").notNull(),
   phone: text("phone").notNull(),
   email: text("email").notNull(),
+  activityType: text("activity_type").notNull(),
   message: text("message").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
@@ -33,6 +34,7 @@ export const insertContactMessageSchema = createInsertSchema(contactMessages).om
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
   phone: z.string().min(9, "Ingresa un teléfono válido"),
   email: z.string().email("Ingresa un email válido"),
+  activityType: z.string().min(2, "Selecciona tu tipo de actividad"),
   message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
 });
 

@@ -10,6 +10,7 @@ import FAQ from "@/pages/faq";
 import Contacto from "@/pages/contacto";
 import Politicas from "@/pages/politicas";
 import Terminos from "@/pages/terminos";
+import AvisoLegal from "@/pages/aviso-legal";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/contacto" component={Contacto} />
       <Route path="/politicas" component={Politicas} />
       <Route path="/terminos" component={Terminos} />
+      <Route path="/aviso-legal" component={AvisoLegal} />
       <Route component={NotFound} />
     </Switch>
   );
