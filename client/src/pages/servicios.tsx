@@ -2,21 +2,14 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import {
-  PhoneIncoming,
-  Sparkles,
-  ListChecks,
-  MessagesSquare,
-  CheckCircle2,
-  Mic,
-} from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import whatsappMockup from "@assets/generated_images/whatsapp_urgent_call_summary.png";
 import callScreen from "@assets/generated_images/incoming_call_interface_screen.png";
 
 export default function Servicios() {
   const services = [
     {
-      icon: PhoneIncoming,
+      icon: "📱",
       title: "Instalación del Asistente de Urgencias",
       description:
         "Configuramos un asistente de voz personalizado que refleja la identidad de tu negocio y atiende llamadas con profesionalidad.",
@@ -27,7 +20,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: Sparkles,
+      icon: "🤖",
       title: "Gestión Inteligente de Llamadas",
       description:
         "Nuestro sistema detecta cuando no puedes atender y activa automáticamente tu asistente para no perder ninguna oportunidad.",
@@ -38,7 +31,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: ListChecks,
+      icon: "⚙️",
       title: "Automatización Total",
       description:
         "Todo el proceso funciona sin que tengas que hacer nada. Desde la llamada hasta el resumen en tu WhatsApp.",
@@ -49,7 +42,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: MessagesSquare,
+      icon: "💬",
       title: "Integración con WhatsApp",
       description:
         "Recibe resúmenes detallados de cada llamada directamente en WhatsApp, listos para que respondas cuando puedas.",
@@ -60,7 +53,7 @@ export default function Servicios() {
       ],
     },
     {
-      icon: Mic,
+      icon: "🎧",
       title: "Soporte Técnico Continuo",
       description:
         "Nuestro equipo está disponible para ayudarte con cualquier ajuste o pregunta sobre tu asistente.",
@@ -95,7 +88,7 @@ export default function Servicios() {
                 className="p-8 hover-elevate transition-all duration-300"
                 data-testid={`card-servicio-${index}`}
               >
-                <service.icon className="w-16 h-16 text-primary mb-4" />
+                <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-muted-foreground mb-6 text-lg">
                   {service.description}

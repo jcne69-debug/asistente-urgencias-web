@@ -2,24 +2,24 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle2, PhoneIncoming, MessagesSquare, Infinity, Mic } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function Precios() {
   const features = [
     {
-      icon: PhoneIncoming,
+      icon: "📱",
       text: "Asistente personal de voz 24/7",
     },
     {
-      icon: MessagesSquare,
+      icon: "💬",
       text: "Notificaciones por WhatsApp",
     },
     {
-      icon: Infinity,
+      icon: "⚙️",
       text: "Configuración del asistente personalizado",
     },
     {
-      icon: Mic,
+      icon: "🎧",
       text: "Soporte técnico continuo",
     },
   ];
@@ -58,7 +58,7 @@ export default function Precios() {
               <ul className="space-y-4">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <feature.icon className="w-6 h-6 text-whatsapp flex-shrink-0 mt-0.5" />
+                    <span className="text-2xl">{feature.icon}</span>
                     <span className="text-lg">{feature.text}</span>
                   </li>
                 ))}

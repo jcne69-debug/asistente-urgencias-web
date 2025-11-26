@@ -2,40 +2,27 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import {
-  PhoneIncoming,
-  Bot,
-  ListChecks,
-  MessagesSquare,
-  Infinity,
-  Bolt,
-  Award,
-} from "lucide-react";
 import heroImage from "@assets/generated_images/hispanic_tradesperson_answering_phone.png";
 
 export default function Home() {
   const steps = [
     {
-      number: "1",
-      icon: PhoneIncoming,
+      number: "01",
       title: "Cliente llama",
       description: "Tu cliente intenta contactarte mientras estás ocupado trabajando",
     },
     {
-      number: "2",
-      icon: Bot,
+      number: "02",
       title: "Asistente responde",
       description: "Si no contestas, tu asistente de voz personalizado atiende automáticamente",
     },
     {
-      number: "3",
-      icon: ListChecks,
+      number: "03",
       title: "Recoge datos",
       description: "Recopila nombre, teléfono, urgencia, localidad y horario preferido",
     },
     {
-      number: "4",
-      icon: MessagesSquare,
+      number: "04",
       title: "WhatsApp instantáneo",
       description: "Recibes un resumen completo por WhatsApp para actuar de inmediato",
     },
@@ -43,17 +30,17 @@ export default function Home() {
 
   const benefits = [
     {
-      icon: Infinity,
+      number: "∞",
       title: "Disponible 24/7",
       description: "Tu asistente nunca duerme ni se toma descansos",
     },
     {
-      icon: Bolt,
+      number: "⚡",
       title: "Respuesta instantánea",
       description: "Cada llamada es atendida en segundos",
     },
     {
-      icon: Award,
+      number: "✓",
       title: "100% profesional",
       description: "Trato amable y recopilación precisa de datos",
     },
@@ -131,10 +118,9 @@ export default function Home() {
                 data-testid={`card-paso-${step.number}`}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl mb-4">
+                  <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-whatsapp mb-6">
                     {step.number}
                   </div>
-                  <step.icon className="w-12 h-12 text-whatsapp mb-4" />
                   <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
                   <p className="text-muted-foreground">{step.description}</p>
                 </div>
@@ -156,7 +142,7 @@ export default function Home() {
                 className="p-8 hover-elevate transition-all duration-300"
                 data-testid={`card-beneficio-${index}`}
               >
-                <benefit.icon className="w-16 h-16 text-primary mb-4" />
+                <div className="text-6xl mb-4 text-whatsapp">{benefit.number}</div>
                 <h3 className="text-2xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground text-lg">{benefit.description}</p>
               </Card>
