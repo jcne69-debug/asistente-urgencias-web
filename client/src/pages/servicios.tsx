@@ -7,18 +7,46 @@ import whatsappMockup from "@assets/generated_images/whatsapp_urgent_call_summar
 import callScreen from "@assets/generated_images/incoming_call_interface_screen.png";
 
 export default function Servicios() {
-  const services = [
+  const assistantTypes = [
     {
       icon: "📱",
-      title: "Instalación del Asistente de Urgencias",
+      title: "Asistente de Urgencias - Estándar",
       description:
-        "Configuramos un asistente de voz personalizado que refleja la identidad de tu negocio y atiende llamadas con profesionalidad.",
+        "Asistente de voz con configuración estándar y personalización básica. Ideal para empezar con una solución confiable y económica.",
       features: [
-        "Personalización completa del mensaje de bienvenida",
-        "Configuración de preguntas específicas para tu sector",
-        "Integración con tu número de teléfono existente",
+        "Mensaje de bienvenida personalizado básico",
+        "Preguntas estándar para recopilación de datos",
+        "Integración con tu número de teléfono",
+        "Resúmenes por WhatsApp automáticos",
       ],
     },
+    {
+      icon: "✨",
+      title: "Asistente de Urgencias - Personalizado",
+      description:
+        "Asistente completamente adaptado a tu negocio con preguntas personalizadas, mensajes únicos y flujos optimizados según tu sector.",
+      features: [
+        "Personalización completa del mensaje de bienvenida",
+        "Configuración avanzada de preguntas específicas para tu sector",
+        "Integración con tu número de teléfono existente",
+        "Optimización de flujo de conversación según tu negocio",
+      ],
+    },
+    {
+      icon: "💻",
+      title: "Asistente de Chat para Webs",
+      description:
+        "Widget de chat inteligente integrado en tu sitio web. Atiende consultas de clientes y captura leads automáticamente.",
+      features: [
+        "Chat integrable en cualquier web",
+        "Respuestas automáticas a preguntas frecuentes",
+        "Recopilación de datos de clientes interesados",
+        "Historial de conversaciones para tu seguimiento",
+      ],
+    },
+  ];
+
+  const services = [
     {
       icon: "🤖",
       title: "Gestión Inteligente de Llamadas",
@@ -81,6 +109,36 @@ export default function Servicios() {
 
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Tipos de Instalación
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
+            {assistantTypes.map((assistant, index) => (
+              <Card
+                key={index}
+                className="p-8 hover-elevate transition-all duration-300"
+                data-testid={`card-asistente-${index}`}
+              >
+                <div className="text-5xl mb-4">{assistant.icon}</div>
+                <h3 className="text-2xl font-semibold mb-3">{assistant.title}</h3>
+                <p className="text-muted-foreground mb-6 text-lg">
+                  {assistant.description}
+                </p>
+                <ul className="space-y-3">
+                  {assistant.features.map((feature, fIndex) => (
+                    <li key={fIndex} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-whatsapp flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Características Incluidas
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {services.map((service, index) => (
               <Card
