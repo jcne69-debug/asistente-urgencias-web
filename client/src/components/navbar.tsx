@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoAsistente from "@assets/925a4426-fba2-4b58-854d-c661931f1b5d_1765818480426.png";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,11 +21,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" data-testid="link-home">
-            <div className="flex items-center gap-2 hover-elevate active-elevate-2 rounded-md px-3 py-2 cursor-pointer">
-              <Phone className="w-6 h-6 md:w-7 md:h-7 text-whatsapp" />
-              <span className="text-white font-bold text-lg md:text-xl">
-                Asistente-Urgencias Personal
-              </span>
+            <div className="flex items-center gap-3 hover-elevate active-elevate-2 rounded-md px-2 py-1 cursor-pointer">
+              <img src={logoAsistente} alt="Asistente IA 24h Autónomos" className="h-12 md:h-14 w-auto" />
             </div>
           </Link>
 
