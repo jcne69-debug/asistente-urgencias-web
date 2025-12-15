@@ -4,50 +4,50 @@ import Vapi from "@vapi-ai/web";
 
 export function VapiWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const vapiRef = useRef<any>(null);
 
   useEffect(() => {
-    const apiKey = "bb309dfd-dc0a-4d07-a23e-bb791d5b73dd";
+    const vapi = new Vapi({
+      publicKey: "bb309dfd-dc0a-4d07-a23e-bb791d5b73dd",
+    });
 
-    try {
-      vapiRef.current = new Vapi({
-        publicKey: apiKey,
-      });
-    } catch (error) {
-      console.error("Error Vapi:", error);
-    }
+    vapiRef.current = vapi;
+
+    vapi.on("message", (message: any) => {
+      console.log("Vapi message:", message);
+    });
+
+    vapi.on("error", (error: any) => {
+      console.error("Vapi error:", error);
+    });
+
+    vapi.on("call-end", () => {
+      console.log("Call ended");
+    });
 
     return () => {
-      try {
-        if (vapiRef.current?.stop) {
-          vapiRef.current.stop();
-        }
-      } catch (e) {
-        console.error(e);
+      if (vapiRef.current) {
+        vapiRef.current.stop();
       }
     };
   }, []);
 
   const handleStart = async () => {
-    try {
-      setIsLoading(true);
-      await vapiRef.current?.start({
-        assistantId: "1fd64959-63b1-41ba-ac00-9417fbfdb4f6",
-      });
-      setIsLoading(false);
-    } catch (error) {
-      console.error("Error:", error);
-      setIsLoading(false);
+    if (vapiRef.current) {
+      try {
+        await vapiRef.current.start({
+          assistantId: "1fd64959-63b1-41ba-ac00-9417fbfdb4f6",
+        });
+      } catch (err) {
+        console.error("Error starting Vapi:", err);
+      }
     }
   };
 
   const handleStop = () => {
-    try {
-      vapiRef.current?.stop();
+    if (vapiRef.current) {
+      vapiRef.current.stop();
       setIsOpen(false);
-    } catch (error) {
-      console.error(error);
     }
   };
 
@@ -71,8 +71,8 @@ export function VapiWidget() {
           </div>
 
           <div className="border-t p-3 bg-white">
-            <button onClick={handleStart} disabled={isLoading} className="w-full bg-whatsapp hover:bg-whatsapp-dark text-white font-semibold py-2 rounded-lg transition-colors disabled:opacity-50 text-sm" data-testid="button-vapi-start">
-              {isLoading ? "Iniciando..." : "Comencemos"}
+            <button onClick={handleStart} className="w-full bg-whatsapp hover:bg-whatsapp-dark text-white font-semibold py-2 rounded-lg transition-colors text-sm" data-testid="button-vapi-start">
+              Comencemos
             </button>
           </div>
         </div>
