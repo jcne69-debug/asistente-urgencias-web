@@ -16,35 +16,54 @@ export function VapiWidget() {
       return;
     }
 
-    vapiRef.current = new Vapi({
-      publicKey: publicKey,
-      assistantId: assistantId,
-      onMessage: () => {
-        setIsLoading(false);
-      },
-      onError: (error: any) => {
-        console.error("Error de Vapi:", error);
-        setIsLoading(false);
-      },
-    });
+    try {
+      vapiRef.current = new Vapi({
+        publicKey: publicKey,
+        assistantId: assistantId,
+        onMessage: () => {
+          setIsLoading(false);
+        },
+        onError: (error: any) => {
+          console.error("Error de Vapi:", error);
+          setIsLoading(false);
+        },
+      });
+    } catch (error) {
+      console.error("Error inicializando Vapi:", error);
+    }
 
     return () => {
-      if (vapiRef.current?.isSessionActive()) {
-        vapiRef.current.stop();
+      if (vapiRef.current) {
+        try {
+          vapiRef.current.stop();
+        } catch (e) {
+          console.error("Error al detener Vapi:", e);
+        }
       }
     };
   }, []);
 
   const toggleChat = () => {
-    if (vapiRef.current) {
-      if (vapiRef.current.isSessionActive()) {
-        vapiRef.current.stop();
-        setIsOpen(false);
-      } else {
-        setIsLoading(true);
-        setIsOpen(true);
-        vapiRef.current.start();
-      }
+    if (!vapiRef.current) return;
+
+    try {
+      setIsLoading(true);
+      setIsOpen(true);
+      vapiRef.current.start();
+    } catch (error) {
+      console.error("Error al iniciar Vapi:", error);
+      setIsLoading(false);
+    }
+  };
+
+  const stopChat = () => {
+    if (!vapiRef.current) return;
+
+    try {
+      vapiRef.current.stop();
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Error al detener Vapi:", error);
     }
   };
 
@@ -54,11 +73,11 @@ export function VapiWidget() {
         <div className="w-80 h-96 bg-white rounded-lg shadow-2xl border border-gray-200 flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
           <div className="bg-gradient-to-r from-primary to-blue-900 text-white p-4 rounded-t-lg flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-2.5 h-2.5 bg-whatsapp rounded-full"></div>
+              <div className="w-2.5 h-2.5 bg-whatsapp rounded-full animate-pulse"></div>
               <h3 className="font-semibold text-sm">Asistentes Urgencias</h3>
             </div>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={stopChat}
               className="hover:bg-white/20 p-1 rounded transition-colors"
               data-testid="button-close-vapi-widget"
             >
@@ -71,8 +90,8 @@ export function VapiWidget() {
               <div className="flex flex-col items-center gap-3">
                 <div className="flex gap-1">
                   <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce delay-100"></div>
-                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce delay-200"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
+                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
                 </div>
                 <p className="text-sm text-muted-foreground">Conectando asistente...</p>
               </div>
@@ -98,7 +117,7 @@ export function VapiWidget() {
               className="w-full bg-whatsapp hover:bg-whatsapp-dark text-white font-semibold py-2 rounded-lg transition-colors disabled:opacity-50 text-sm"
               data-testid="button-vapi-start"
             >
-              {isLoading ? "Iniciando..." : "Iniciar Conversación"}
+              {isLoading ? "Iniciando..." : "Pruébame"}
             </button>
           </div>
         </div>
