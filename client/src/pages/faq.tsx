@@ -51,7 +51,7 @@ export default function FAQ() {
     {
       question: "¿Puedo modificar las preguntas que hace el asistente?",
       answer:
-        "Sí y No, el asistente Neo es estándar para todos, pero bajo presupuesto y ya adapta el contenido según lo que hay y lo que añado. Puedes personalizar ciertos aspectos según tu negocio durante la configuración inicial, y si necesitas cambios más adelante, puedes contactarnos.",
+        "Sí y No, el asistente Neo es estándar para todos, pero esta la opcion personalizada bajo presupuesto, se pueden personalizar ciertos aspectos según tu negocio y preferencias y si necesitas cambios más adelante, puedes contactarnos.",
     },
     {
       question: "¿Qué sucede si hay un problema técnico?",
