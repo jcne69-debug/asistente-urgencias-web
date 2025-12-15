@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 export function VapiWidget() {
   useEffect(() => {
-    // Cargar script de Vapi
     const script = document.createElement("script");
     script.src = "https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js";
     script.async = true;
@@ -20,19 +19,17 @@ export function VapiWidget() {
       <style>{`
         vapi-widget {
           --vapi-button-bg: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%) !important;
+          --vapi-button-hover-bg: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
           --vapi-button-text: white !important;
           --vapi-button-border-radius: 50px !important;
           --vapi-button-padding: 12px 20px !important;
-          --vapi-button-font-size: 14px !important;
+          --vapi-button-font-size: 13px !important;
           --vapi-button-font-weight: 600 !important;
-          --vapi-widget-width: 380px !important;
-          --vapi-widget-height: 500px !important;
-          --vapi-message-box-bg: #f3f4f6 !important;
-        }
-        
-        vapi-widget::part(dialog) {
-          max-width: 380px !important;
-          max-height: 500px !important;
+          --vapi-button-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+          --vapi-primary-color: #25D366 !important;
+          --vapi-widget-width: 360px !important;
+          --vapi-widget-height: 480px !important;
+          --vapi-widget-border-radius: 12px !important;
         }
       `}</style>
       <vapi-widget
