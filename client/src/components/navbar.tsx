@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsistente from "@assets/925a4426-fba2-4b58-854d-c661931f1b5d_1765818480426.png";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +20,21 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" data-testid="link-home">
-            <div className="flex items-center gap-3 hover-elevate active-elevate-2 rounded-md px-2 py-1 cursor-pointer">
-              <img src={logoAsistente} alt="Asistente IA 24h Autónomos" className="h-12 md:h-14 w-auto" />
+            <div className="flex items-center gap-3 hover-elevate active-elevate-2 rounded-lg px-3 py-2 cursor-pointer">
+              <div className="flex items-center justify-center w-10 h-10 md:w-11 md:h-11 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg">
+                <div className="flex flex-col items-center justify-center gap-0.5">
+                  <Wifi className="w-4 h-4 md:w-5 md:h-5 text-white rotate-45" />
+                  <div className="w-3 h-1 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <div className="hidden sm:flex flex-col leading-tight">
+                <span className="text-white font-bold text-sm md:text-base">
+                  Asistente IA
+                </span>
+                <span className="text-yellow-300 font-semibold text-xs md:text-sm">
+                  24h Autónomos
+                </span>
+              </div>
             </div>
           </Link>
 
