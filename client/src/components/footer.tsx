@@ -62,15 +62,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span className="text-white/80">+34 900 123 456</span>
+                <span className="text-white/80">WhatsApp: +34 640 397 434</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span className="text-white/80">info@asistente-urgencias.es</span>
+                <span className="text-white/80">asistentesurgencias@gmail.com</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span className="text-white/80">Madrid, España</span>
+                <span className="text-white/80">Valencia, España</span>
               </li>
             </ul>
           </div>
@@ -112,7 +112,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-center text-white/60 mb-4">&copy; {new Date().getFullYear()} Asistente-Urgencias Personal para Autónomos. Todos los derechos reservados.</p>
-          <p className="text-center text-white/60 text-sm">Email: jcne69@gmail.com</p>
+          <p className="text-center text-white/60 text-sm">Email: asistentesurgencias@gmail.com</p>
           <p className="text-center text-white/60 text-sm mt-2">Servicio gestionado por Inteligencia Artificial + Automatizaciones</p>
         </div>
       </div>

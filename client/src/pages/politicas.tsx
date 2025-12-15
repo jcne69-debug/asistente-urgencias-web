@@ -21,7 +21,7 @@ export default function Politicas() {
               <h2 className="text-2xl font-bold mb-4">Responsable del Tratamiento</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Juan Carlos Naranjo Espinosa<br/>
-                Email: jcne69@gmail.com
+                Email: asistentesurgencias@gmail.com
               </p>
             </div>
 
@@ -56,7 +56,7 @@ export default function Politicas() {
             <div>
               <h2 className="text-2xl font-bold mb-4">Derechos</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición y portabilidad enviando un email a jcne69@gmail.com
+                Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición y portabilidad enviando un email a asistentesurgencias@gmail.com
               </p>
             </div>
 

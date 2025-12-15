@@ -20,7 +20,7 @@ export default function AvisoLegal() {
             <div>
               <h2 className="text-2xl font-bold mb-4">Titular del Sitio</h2>
               <p className="text-muted-foreground leading-relaxed">
-                El presente sitio web y el servicio "Asistente-Urgencias Personal" pertenece a Juan Carlos Naranjo Espinosa, con email de contacto: jcne69@gmail.com
+                El presente sitio web y el servicio "Asistente-Urgencias Personal" pertenece a Juan Carlos Naranjo Espinosa, con email de contacto: asistentesurgencias@gmail.com
               </p>
             </div>
 

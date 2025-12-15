@@ -263,10 +263,10 @@ export default function Contacto() {
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Teléfono</h3>
-                      <p className="text-muted-foreground">+34 900 123 456</p>
+                      <h3 className="font-semibold text-lg mb-1">WhatsApp</h3>
+                      <p className="text-muted-foreground">+34 640 397 434</p>
                       <p className="text-sm text-muted-foreground mt-1">
-                        Lunes a Viernes, 9:00 - 18:00
+                        Respuesta rápida por WhatsApp
                       </p>
                     </div>
                   </div>
@@ -279,7 +279,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Email</h3>
-                      <p className="text-muted-foreground">info@asistente-urgencias.es</p>
+                      <p className="text-muted-foreground">asistentesurgencias@gmail.com</p>
                       <p className="text-sm text-muted-foreground mt-1">
                         Respuesta en menos de 24 horas
                       </p>
@@ -294,7 +294,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Ubicación</h3>
-                      <p className="text-muted-foreground">Madrid, España</p>
+                      <p className="text-muted-foreground">Valencia, España</p>
                       <p className="text-sm text-muted-foreground mt-1">
                         Servicio disponible en toda España
                       </p>
