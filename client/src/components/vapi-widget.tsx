@@ -25,6 +25,14 @@ export function VapiWidget() {
           --vapi-button-padding: 12px 20px !important;
           --vapi-button-font-size: 14px !important;
           --vapi-button-font-weight: 600 !important;
+          --vapi-widget-width: 380px !important;
+          --vapi-widget-height: 500px !important;
+          --vapi-message-box-bg: #f3f4f6 !important;
+        }
+        
+        vapi-widget::part(dialog) {
+          max-width: 380px !important;
+          max-height: 500px !important;
         }
       `}</style>
       <vapi-widget
