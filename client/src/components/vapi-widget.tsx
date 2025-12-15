@@ -40,7 +40,7 @@ export function VapiWidget() {
   return (
     <button
       onClick={handleClick}
-      className={`fixed bottom-6 right-6 z-40 rounded-full px-5 py-3 shadow-lg hover:shadow-xl transition-all flex items-center gap-2 font-semibold text-sm hover:scale-105 active:scale-95 ${
+      className={`fixed bottom-6 right-6 z-[9999] rounded-full px-5 py-3 shadow-lg hover:shadow-xl transition-all flex items-center gap-2 font-semibold text-sm hover:scale-105 active:scale-95 ${
         isActive
           ? "bg-red-600 hover:bg-red-700 text-white"
           : "bg-gradient-to-br from-blue-900 to-blue-700 hover:from-blue-800 hover:to-blue-600 text-white"
