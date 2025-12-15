@@ -29,7 +29,7 @@ export function Navbar() {
               </div>
               <div className="hidden sm:flex flex-col leading-tight">
                 <span className="text-white font-bold text-sm md:text-base">
-                  Asistente IA
+                  Asistentes Urgencias
                 </span>
                 <span className="text-yellow-300 font-semibold text-xs md:text-sm">
                   24h Autónomos
