@@ -5,22 +5,48 @@ import { Link } from "wouter";
 import { CheckCircle2 } from "lucide-react";
 
 export default function Precios() {
-  const features = [
+  const plans = [
     {
       icon: "📱",
-      text: "Asistente personal de voz 24/7",
+      title: "Asistente de Urgencias - Estándar",
+      description: "Solución completa con configuración estándar",
+      installation: 99,
+      monthly: 99,
+      badge: "Recomendado",
     },
     {
-      icon: "💬",
-      text: "Notificaciones por WhatsApp",
+      icon: "✨",
+      title: "Asistente de Urgencias - Personalizado",
+      description: "Completamente adaptado a tu negocio",
+      installation: 150,
+      monthly: 99,
+      badge: "Premium",
     },
     {
-      icon: "⚙️",
-      text: "Configuración del asistente personalizado",
+      icon: "💻",
+      title: "Asistente de Chat para Webs",
+      description: "Widget inteligente para tu sitio web",
+      installation: 99,
+      monthly: 99,
+      badge: "Nuevo",
+    },
+  ];
+
+  const commonFeatures = [
+    {
+      icon: "✓",
+      text: "Sin permanencia",
+      description: "Cancela cuando quieras sin penalizaciones",
     },
     {
-      icon: "🎧",
-      text: "Soporte técnico continuo",
+      icon: "✓",
+      text: "Configuración incluida",
+      description: "Nos encargamos de toda la instalación y configuración inicial",
+    },
+    {
+      icon: "✓",
+      text: "Actualizaciones automáticas",
+      description: "Mejoras y nuevas funcionalidades sin coste adicional",
     },
   ];
 
@@ -32,79 +58,85 @@ export default function Precios() {
             Precios Transparentes
           </h1>
           <p className="text-lg md:text-xl text-white/90">
-            Un único plan completo diseñado para autónomos que quieren crecer sin perder clientes
+            Soluciones a medida para autónomos que quieren crecer sin perder clientes
           </p>
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-background">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="p-8 md:p-12 border-2 border-whatsapp hover-elevate transition-all duration-300" data-testid="card-plan-autonomo">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Plan Autónomo
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6">
-                Todo lo que necesitas para nunca perder una llamada importante
-              </p>
-              <div className="inline-block bg-primary/10 px-6 py-3 rounded-lg">
-                <p className="text-sm text-muted-foreground mb-1">Precio</p>
-                <p className="text-4xl font-bold text-primary">Consultar</p>
-              </div>
-            </div>
-
-            <div className="space-y-6 mb-8">
-              <h3 className="font-semibold text-xl">Incluye:</h3>
-              <ul className="space-y-4">
-                {features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-2xl">{feature.icon}</span>
-                    <span className="text-lg">{feature.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-4 mb-8">
-              <div className="bg-card p-6 rounded-lg">
-                <h4 className="font-semibold mb-2 flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-whatsapp" />
-                  Sin permanencia
-                </h4>
-                <p className="text-muted-foreground">
-                  Cancela cuando quieras sin penalizaciones
-                </p>
-              </div>
-              <div className="bg-card p-6 rounded-lg">
-                <h4 className="font-semibold mb-2 flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-whatsapp" />
-                  Configuración incluida
-                </h4>
-                <p className="text-muted-foreground">
-                  Nos encargamos de toda la instalación y configuración inicial
-                </p>
-              </div>
-              <div className="bg-card p-6 rounded-lg">
-                <h4 className="font-semibold mb-2 flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-whatsapp" />
-                  Actualizaciones automáticas
-                </h4>
-                <p className="text-muted-foreground">
-                  Mejoras y nuevas funcionalidades sin coste adicional
-                </p>
-              </div>
-            </div>
-
-            <Link href="/contacto">
-              <Button
-                size="lg"
-                className="w-full bg-whatsapp hover:bg-whatsapp-dark text-white font-semibold text-lg"
-                data-testid="button-pedir-presupuesto"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-12">
+            {plans.map((plan, index) => (
+              <Card
+                key={index}
+                className="p-8 hover-elevate transition-all duration-300 flex flex-col"
+                data-testid={`card-plan-${index}`}
               >
-                Pedir Presupuesto
-              </Button>
-            </Link>
+                <div className="mb-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <span className="text-4xl">{plan.icon}</span>
+                    <span className="text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">
+                      {plan.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
+                  <p className="text-muted-foreground text-sm">{plan.description}</p>
+                </div>
+
+                <div className="space-y-3 mb-6 flex-grow">
+                  <div className="bg-card p-4 rounded-lg">
+                    <p className="text-sm text-muted-foreground mb-1">Instalación</p>
+                    <p className="text-2xl font-bold text-primary">{plan.installation}€</p>
+                  </div>
+                  <div className="bg-card p-4 rounded-lg">
+                    <p className="text-sm text-muted-foreground mb-1">Mantenimiento Mensual</p>
+                    <p className="text-2xl font-bold text-primary">{plan.monthly}€</p>
+                  </div>
+                </div>
+
+                <Link href="/contacto">
+                  <Button
+                    size="lg"
+                    className="w-full bg-whatsapp hover:bg-whatsapp-dark text-white font-semibold"
+                    data-testid={`button-solicitar-${index}`}
+                  >
+                    Solicitar
+                  </Button>
+                </Link>
+              </Card>
+            ))}
+          </div>
+
+          <Card className="p-8 bg-primary/5 border-2 border-primary/20 mb-12">
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-3">Descuento por Múltiples Servicios</h3>
+              <p className="text-lg text-foreground">
+                Si contratas <span className="font-semibold">2 o más servicios</span>, obtén un{" "}
+                <span className="text-primary font-bold">40% de descuento</span> en el mantenimiento mensual de cada uno
+              </p>
+            </div>
           </Card>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-card">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Incluido en Todos los Planes
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {commonFeatures.map((feature, index) => (
+              <div key={index} className="p-6 bg-background rounded-lg">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-whatsapp flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">{feature.text}</h4>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
