@@ -9,12 +9,10 @@ export function VapiWidget() {
 
   useEffect(() => {
     const apiKey = "bb309dfd-dc0a-4d07-a23e-bb791d5b73dd";
-    const assistantId = "1fd64959-63b1-41ba-ac00-9417fbfdb4f6";
 
     try {
       vapiRef.current = new Vapi({
         publicKey: apiKey,
-        assistantId: assistantId,
       });
     } catch (error) {
       console.error("Error Vapi:", error);
@@ -34,7 +32,9 @@ export function VapiWidget() {
   const handleStart = async () => {
     try {
       setIsLoading(true);
-      await vapiRef.current?.start();
+      await vapiRef.current?.start({
+        assistantId: "1fd64959-63b1-41ba-ac00-9417fbfdb4f6",
+      });
       setIsLoading(false);
     } catch (error) {
       console.error("Error:", error);
@@ -69,19 +69,19 @@ export function VapiWidget() {
             <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center">
               <MessageCircle className="w-8 h-8 text-primary" />
             </div>
-            <p className="text-sm font-medium">¡Hola! Soy tu asistente</p>
-            <p className="text-xs text-muted-foreground">Habla conmigo o cuéntame qué necesitas</p>
+            <p className="text-sm font-medium">¡Hola! Soy tu futuro asistente.</p>
+            <p className="text-xs text-muted-foreground">Habla conmigo y simulamos una urgencia de prueba.</p>
           </div>
 
           <div className="border-t p-3 bg-white">
             <button onClick={handleStart} disabled={isLoading} className="w-full bg-whatsapp hover:bg-whatsapp-dark text-white font-semibold py-2 rounded-lg transition-colors disabled:opacity-50 text-sm" data-testid="button-vapi-start">
-              {isLoading ? "Iniciando..." : "Pruébame"}
+              {isLoading ? "Iniciando..." : "Comencemos"}
             </button>
           </div>
         </div>
       )}
 
-      <button onClick={() => setIsOpen(!isOpen)} className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center font-semibold text-sm ${isOpen ? "bg-red-500 hover:bg-red-600" : "bg-gradient-to-br from-primary to-blue-900 hover:shadow-xl hover:scale-110"}`} data-testid="button-vapi-toggle">
+      <button onClick={() => setIsOpen(!isOpen)} className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center font-semibold text-xs ${isOpen ? "bg-red-500 hover:bg-red-600" : "bg-gradient-to-br from-primary to-blue-900 hover:shadow-xl hover:scale-110"}`} title="Pruébame" data-testid="button-vapi-toggle">
         {isOpen ? <X className="w-6 h-6 text-white" /> : <MessageCircle className="w-6 h-6 text-white" />}
       </button>
     </div>
