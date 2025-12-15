@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { X, MessageCircle } from "lucide-react";
+import { X } from "lucide-react";
 import Vapi from "@vapi-ai/web";
 
 export function VapiWidget() {
@@ -66,9 +66,6 @@ export function VapiWidget() {
           </div>
 
           <div className="p-6 bg-gray-50 text-center min-h-48 flex flex-col justify-center items-center gap-3">
-            <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center">
-              <MessageCircle className="w-8 h-8 text-primary" />
-            </div>
             <p className="text-sm font-medium">¡Hola! Soy tu futuro asistente.</p>
             <p className="text-xs text-muted-foreground">Habla conmigo y simulamos una urgencia de prueba.</p>
           </div>
@@ -81,8 +78,8 @@ export function VapiWidget() {
         </div>
       )}
 
-      <button onClick={() => setIsOpen(!isOpen)} className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center font-semibold text-xs ${isOpen ? "bg-red-500 hover:bg-red-600" : "bg-gradient-to-br from-primary to-blue-900 hover:shadow-xl hover:scale-110"}`} title="Pruébame" data-testid="button-vapi-toggle">
-        {isOpen ? <X className="w-6 h-6 text-white" /> : <MessageCircle className="w-6 h-6 text-white" />}
+      <button onClick={() => setIsOpen(!isOpen)} className={`px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center font-semibold text-sm ${isOpen ? "bg-red-500 hover:bg-red-600 text-white" : "bg-gradient-to-br from-primary to-blue-900 hover:shadow-xl hover:scale-105 text-white"}`} data-testid="button-vapi-toggle">
+        {isOpen ? <X className="w-5 h-5" /> : "Pruébame"}
       </button>
     </div>
   );
