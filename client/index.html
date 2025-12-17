@@ -70,6 +70,20 @@
         assistant: assistant,
         config: buttonConfig
       });
+
+      // Forzar que el widget sea flotante después de que se cree
+      setTimeout(function() {
+        var vapiContainer = document.querySelector('[id^="vapi"]') || 
+                           document.querySelector('[class*="vapi"]') ||
+                           document.querySelector('button[style*="position"]');
+        if (vapiContainer) {
+          var parent = vapiContainer.closest('div') || vapiContainer.parentElement;
+          if (parent && parent !== document.body) {
+            parent.style.cssText = 'position: fixed !important; bottom: 28px !important; right: 28px !important; z-index: 99999 !important;';
+          }
+          vapiContainer.style.cssText += 'position: fixed !important; bottom: 28px !important; right: 28px !important; z-index: 99999 !important;';
+        }
+      }, 500);
     };
   })(document, "script");
 </script>
