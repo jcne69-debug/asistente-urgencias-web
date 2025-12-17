@@ -19,118 +19,59 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-<!-- VAPI VOICE WIDGET (floating button + auto-open panel) -->
-<style>
-  #vapi-float-btn {
-    position: fixed;
-    right: 28px;
-    bottom: 28px;
-    z-index: 99999;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 12px 18px;
-    border-radius: 999px;
-
-    background: rgba(20, 68, 185, 0.95);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.12);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.28);
-
-    color: #fff;
-    font-weight: 700;
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-
-    cursor: pointer;
-    user-select: none;
-  }
-
-  #vapi-float-btn:active { transform: translateY(1px); }
-
-  #vapi-float-btn .icon {
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-  }
-
-  /* Panel tamaño contenido (no gigante) */
-  .vapi-widget-container, .vapi-widget, .vapi-container {
-    max-width: 360px !important;
-  }
-
-  /* Ocultar el botón por defecto del SDK de Vapi */
-  .vapi-btn, [class*="vapi-btn"], button[class*="vapi"], .vapi-call-button {
-    display: none !important;
-  }
-</style>
-
-<div id="vapi-float-btn" aria-label="Probar asistente de voz">
-  <svg class="icon" viewBox="0 0 24 24" fill="none">
-    <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M19 11a7 7 0 0 1-14 0" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M12 18v3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-  <span>Pruébame</span>
-</div>
-
+<!-- VAPI VOICE WIDGET - Botón verde flotante con texto "Pruébame" -->
 <script>
-  (function () {
-    const ASSISTANT_ID = "1fd64959-63b1-41ba-ac00-9417fbfdb4f6";
-    const PUBLIC_KEY   = "bb309dfd-dc0a-4d07-a23e-bb791d5b73dd";
+  var vapiInstance = null;
+  const assistant = "1fd64959-63b1-41ba-ac00-9417fbfdb4f6";
+  const apiKey = "bb309dfd-dc0a-4d07-a23e-bb791d5b73dd";
 
-    let vapiInstance = null;
-    let sdkReady = false;
+  const buttonConfig = {
+    position: "bottom-right",
+    offset: "28px",
+    width: "auto",
+    height: "50px",
 
-    // Carga rápida del SDK (para que al click NO tarde)
-    const s = document.createElement("script");
-    s.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
-    s.async = true;
-    s.defer = true;
-    document.head.appendChild(s);
+    idle: {
+      color: "rgb(37, 211, 102)",
+      type: "pill",
+      title: "Pruébame",
+      subtitle: "",
+      icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone.svg"
+    },
 
-    s.onload = function () {
-      sdkReady = true;
+    loading: {
+      color: "rgb(37, 211, 102)",
+      type: "pill",
+      title: "Conectando...",
+      subtitle: "",
+      icon: "https://unpkg.com/lucide-static@0.321.0/icons/loader.svg"
+    },
 
-      // Inicializa el widget ya cargado (sin UI por defecto; usamos nuestro botón)
-      // Si la versión del SDK no soporta "ui: { enabled: false }", lo ignora sin romper.
+    active: {
+      color: "rgb(220, 38, 38)",
+      type: "pill",
+      title: "Terminar",
+      subtitle: "",
+      icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg"
+    }
+  };
+
+  (function (d, t) {
+    var g = document.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
+
+    g.onload = function () {
       vapiInstance = window.vapiSDK.run({
-        apiKey: PUBLIC_KEY,
-        assistant: ASSISTANT_ID,
-        config: {
-          ui: { enabled: false },
-          // Panel compacto (si el SDK lo soporta; si no, igualmente queda decente)
-          panel: { width: 340, height: 420, maxWidth: 360, maxHeight: 520 },
-        },
+        apiKey: apiKey,
+        assistant: assistant,
+        config: buttonConfig
       });
     };
-
-    function openNow() {
-      // Si todavía no cargó, reintenta en 100ms (1 sola cola corta)
-      if (!sdkReady || !vapiInstance) {
-        setTimeout(openNow, 100);
-        return;
-      }
-
-      // Abrir panel al instante (según método disponible)
-      if (typeof vapiInstance.open === "function") return vapiInstance.open();
-      if (typeof vapiInstance.show === "function") return vapiInstance.show();
-      // Fallback: si no hay panel, al menos inicia la conversación de voz
-      if (typeof vapiInstance.start === "function") return vapiInstance.start();
-
-      // Último fallback: re-run con autostart (por si cambia versión)
-      try {
-        window.vapiSDK.run({
-          apiKey: PUBLIC_KEY,
-          assistant: ASSISTANT_ID,
-          config: { autoStart: true, panel: { width: 340, height: 420 } }
-        });
-      } catch (e) {}
-    }
-
-    document.getElementById("vapi-float-btn").addEventListener("click", openNow);
-  })();
+  })(document, "script");
 </script>
 
   </body>
