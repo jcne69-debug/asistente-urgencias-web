@@ -59,6 +59,11 @@
   .vapi-widget-container, .vapi-widget, .vapi-container {
     max-width: 360px !important;
   }
+
+  /* Ocultar el botón por defecto del SDK de Vapi */
+  .vapi-btn, [class*="vapi-btn"], button[class*="vapi"], .vapi-call-button {
+    display: none !important;
+  }
 </style>
 
 <div id="vapi-float-btn" aria-label="Probar asistente de voz">
