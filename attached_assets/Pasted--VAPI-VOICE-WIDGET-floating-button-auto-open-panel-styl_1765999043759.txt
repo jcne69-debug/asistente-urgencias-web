@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Asistente-Urgencias Personal para Autónomos | Nunca Pierdas Otra Llamada Importante</title>
-    <meta name="description" content="Servicio profesional de asistente de voz 24/7 para autónomos. Recibe tus llamadas urgentes cuando estás ocupado y obtén resúmenes por WhatsApp. Instalación rápida y sin complicaciones." />
-    
-    <meta property="og:title" content="Asistente-Urgencias Personal para Autónomos | Nunca Pierdas Otra Llamada Importante" />
-    <meta property="og:description" content="Tu asistente de voz 24/7 que atiende llamadas urgentes y te envía resúmenes por WhatsApp. Perfecto para autónomos profesionales." />
-    <meta property="og:type" content="website" />
-    
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-
 <!-- VAPI VOICE WIDGET (floating button + auto-open panel) -->
 <style>
   #vapi-float-btn {
@@ -127,6 +106,3 @@
     document.getElementById("vapi-float-btn").addEventListener("click", openNow);
   })();
 </script>
-
-  </body>
-</html>
