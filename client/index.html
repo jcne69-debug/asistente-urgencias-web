@@ -20,15 +20,6 @@
     <script type="module" src="/src/main.tsx"></script>
 
 <!-- VAPI VOICE WIDGET - Botón verde flotante con texto "Pruébame" -->
-<style>
-  /* Forzar que el widget de Vapi sea flotante */
-  [id*="vapi"], [class*="vapi"], .vapi-btn-container, .vapi-widget-container {
-    position: fixed !important;
-    bottom: 28px !important;
-    right: 28px !important;
-    z-index: 99999 !important;
-  }
-</style>
 <script>
   var vapiInstance = null;
   const assistant = "1fd64959-63b1-41ba-ac00-9417fbfdb4f6";
