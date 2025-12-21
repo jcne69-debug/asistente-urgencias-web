@@ -10,24 +10,24 @@ export default function Precios() {
       icon: "📱",
       title: "Asistente de Urgencias - Estándar",
       description: "Solución completa con configuración estándar",
-      installation: 99,
-      monthly: 99,
+      installation: "119,79",
+      monthly: "119,79",
       badge: "Recomendado",
     },
     {
       icon: "✨",
       title: "Asistente de Urgencias - Personalizado",
       description: "Completamente adaptado a tu negocio",
-      installation: 150,
-      monthly: 99,
+      installation: "181,50",
+      monthly: "119,79",
       badge: "Premium",
     },
     {
       icon: "💻",
       title: "Asistente de Chat para Webs",
       description: "Widget inteligente para tu sitio web",
-      installation: 99,
-      monthly: 99,
+      installation: "229,90",
+      monthly: "119,79",
       badge: "Nuevo",
     },
   ];
@@ -87,10 +87,12 @@ export default function Precios() {
                   <div className="bg-card p-4 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Instalación</p>
                     <p className="text-2xl font-bold text-primary">{plan.installation}€</p>
+                    <p className="text-xs text-muted-foreground">IVA incluido</p>
                   </div>
                   <div className="bg-card p-4 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Mantenimiento Mensual</p>
                     <p className="text-2xl font-bold text-primary">{plan.monthly}€</p>
+                    <p className="text-xs text-muted-foreground">IVA incluido</p>
                   </div>
                 </div>
 
