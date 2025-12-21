@@ -87,12 +87,12 @@ export default function Precios() {
                   <div className="bg-card p-4 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Instalación</p>
                     <p className="text-2xl font-bold text-primary">{plan.installation}€</p>
-                    <p className="text-xs text-muted-foreground">IVA incluido</p>
+                    <p className="text-xs text-muted-foreground font-bold">IVA incluido</p>
                   </div>
                   <div className="bg-card p-4 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Mantenimiento Mensual</p>
                     <p className="text-2xl font-bold text-primary">{plan.monthly}€</p>
-                    <p className="text-xs text-muted-foreground">IVA incluido</p>
+                    <p className="text-xs text-muted-foreground font-bold">IVA incluido</p>
                   </div>
                 </div>
 
