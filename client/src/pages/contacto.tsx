@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -26,19 +27,30 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, CheckCircle2, Loader2 } from "lucide-react";
+import { Link } from "wouter";
+import { z } from "zod";
+
+const contactFormSchema = insertContactMessageSchema.extend({
+  acceptPrivacy: z.boolean().refine((val) => val === true, {
+    message: "Debes aceptar la política de privacidad para continuar",
+  }),
+});
 
 export default function Contacto() {
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
 
-  const form = useForm<InsertContactMessage>({
-    resolver: zodResolver(insertContactMessageSchema),
+  type ContactFormData = z.infer<typeof contactFormSchema>;
+
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       phone: "",
       email: "",
       activityType: "",
       message: "",
+      acceptPrivacy: false,
     },
   });
 
@@ -64,8 +76,9 @@ export default function Contacto() {
     },
   });
 
-  const onSubmit = (data: InsertContactMessage) => {
-    mutation.mutate(data);
+  const onSubmit = (data: ContactFormData) => {
+    const { acceptPrivacy, ...contactData } = data;
+    mutation.mutate(contactData);
   };
 
   return (
@@ -222,6 +235,33 @@ export default function Contacto() {
                               />
                             </FormControl>
                             <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="acceptPrivacy"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                            <FormControl>
+                              <Checkbox
+                                checked={field.value}
+                                onCheckedChange={field.onChange}
+                                disabled={mutation.isPending}
+                                data-testid="checkbox-privacy"
+                              />
+                            </FormControl>
+                            <div className="space-y-1 leading-none">
+                              <FormLabel className="text-sm font-normal cursor-pointer">
+                                He leído y acepto la{" "}
+                                <Link href="/politicas" className="text-primary underline hover:no-underline">
+                                  Política de Privacidad
+                                </Link>
+                                {" "}*
+                              </FormLabel>
+                              <FormMessage />
+                            </div>
                           </FormItem>
                         )}
                       />
