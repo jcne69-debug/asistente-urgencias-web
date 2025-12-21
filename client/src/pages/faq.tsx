@@ -56,7 +56,7 @@ export default function FAQ() {
     {
       question: "¿Qué sucede si hay un problema técnico?",
       answer:
-        "Nuestro equipo de soporte está disponible para resolver cualquier incidencia rápidamente. Además, monitoreamos el sistema constantemente para detectar y solucionar problemas de forma proactiva. Tu servicio siempre estará funcionando.",
+        "Nuestro equipo de soporte está disponible para resolver cualquier incidencia relacionada con nuestro sistema. Sin embargo, ten en cuenta que dependemos de plataformas externas (telefonía, WhatsApp, servidores de terceros) que pueden experimentar interrupciones ajenas a nuestro control. Hacemos todo lo posible para mantener el servicio activo, pero no podemos garantizar disponibilidad del 100% cuando el problema proviene de estos proveedores externos.",
     },
   ];
 
