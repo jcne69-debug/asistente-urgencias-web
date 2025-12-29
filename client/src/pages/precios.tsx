@@ -1,8 +1,17 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Link } from "wouter";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Info } from "lucide-react";
 
 export default function Precios() {
   const plans = [
@@ -90,7 +99,45 @@ export default function Precios() {
                     <p className="text-xs text-muted-foreground font-bold">IVA incluido</p>
                   </div>
                   <div className="bg-card p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground mb-1">Mantenimiento Mensual</p>
+                    <div className="flex items-center gap-1 mb-1">
+                      <p className="text-sm text-muted-foreground">Mantenimiento Mensual</p>
+                      {index < 2 && (
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <button
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                              data-testid={`button-info-mantenimiento-${index}`}
+                            >
+                              <Info className="w-4 h-4" />
+                            </button>
+                          </DialogTrigger>
+                          <DialogContent className="sm:max-w-md">
+                            <DialogHeader>
+                              <DialogTitle>Sobre el coste de mantenimiento</DialogTitle>
+                              <DialogDescription className="pt-4 space-y-3">
+                                <p>
+                                  El precio base de mantenimiento es de <strong>119,79€/mes</strong> e incluye 
+                                  un volumen normal de llamadas y mensajes de WhatsApp.
+                                </p>
+                                <p>
+                                  Si tu negocio recibe un volumen muy alto de llamadas, el coste de 
+                                  mantenimiento puede variar ligeramente para cubrir los gastos operativos 
+                                  adicionales (minutos de voz, mensajes enviados, etc.).
+                                </p>
+                                <p>
+                                  En estos casos, te informaremos con antelacion y acordaremos juntos 
+                                  la mejor solucion para tu negocio.
+                                </p>
+                                <p className="text-sm text-muted-foreground">
+                                  La mayoria de nuestros clientes se mantienen dentro del precio base sin 
+                                  costes adicionales.
+                                </p>
+                              </DialogDescription>
+                            </DialogHeader>
+                          </DialogContent>
+                        </Dialog>
+                      )}
+                    </div>
                     <p className="text-2xl font-bold text-primary">{plan.monthly}€</p>
                     <p className="text-xs text-muted-foreground font-bold">IVA incluido</p>
                   </div>
