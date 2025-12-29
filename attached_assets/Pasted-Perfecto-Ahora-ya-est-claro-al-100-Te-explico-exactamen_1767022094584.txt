@@ -1,0 +1,194 @@
+Perfecto. Ahora ya está **claro al 100%** 👍
+Te explico **exactamente qué hacer**, **por qué**, y **sin cambiar tu web visualmente**.
+
+Tu stack es: **React + Vite (SPA) + Express**
+👉 El problema SEO **NO es Replit**, es que **Google ve poco HTML inicial**.
+
+La solución correcta es:
+**SEO server-side + pre-render ligero + meta dinámicos**, SIN tocar diseño ni lógica.
+
+---
+
+## OBJETIVO REAL
+
+Que Google:
+
+* lea texto clave **en el HTML inicial**
+* tenga `title`, `description`, `schema`, `robots`, `sitemap`
+* indexe bien **aunque el frontend sea React**
+
+---
+
+# ✅ LO QUE TIENES QUE HACER (PASO A PASO)
+
+## 1️⃣ Usar Express para servir SEO (CLAVE)
+
+Tu Express **YA EXISTE**, así que lo aprovechamos.
+
+### 1.1 En tu backend (`server.ts` o `index.ts`)
+
+Asegúrate de que Express sirve el build de Vite:
+
+```ts
+import express from "express";
+import path from "path";
+
+const app = express();
+const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname, "dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
+app.listen(3000);
+```
+
+👉 Esto es estándar. No cambia nada visual.
+
+---
+
+## 2️⃣ SEO REAL: editar `index.html` de Vite (esto SÍ importa)
+
+📍 Archivo: `index.html` (raíz del proyecto, NO en src)
+
+### 2.1 Sustituye el `<head>` por esto (o complétalo)
+
+```html
+<title>Asistente de Urgencias para Autónomos | No pierdas llamadas</title>
+
+<meta name="description"
+  content="Asistente virtual por voz para autonomos. Atiende llamadas cuando no puedes responder, recoge datos urgentes y envia el aviso por WhatsApp." />
+
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://asistentesurgencias.com/" />
+
+<meta property="og:title" content="Asistente de Urgencias para Autónomos" />
+<meta property="og:description" content="Atiende llamadas urgentes y envia los datos por WhatsApp." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://asistentesurgencias.com/" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Asistente de Urgencias para Autónomos",
+  "url": "https://asistentesurgencias.com/",
+  "telephone": "+34640397434",
+  "areaServed": "España",
+  "description": "Asistente virtual por voz que atiende llamadas urgentes para autonomos y envia los datos por WhatsApp."
+}
+</script>
+```
+
+👉 Esto **Google SÍ lo lee** aunque React cargue después.
+
+---
+
+## 3️⃣ Texto SEO REAL en HTML (SIN cambiar diseño)
+
+Esto es **crítico**.
+
+React renderiza tarde.
+Google agradece **texto ya presente**.
+
+### 3.1 En `index.html`, justo dentro de `<body>` y ANTES del `<div id="root">`
+
+```html
+<section style="max-width:900px;margin:40px auto;padding:0 16px;font-size:14px;line-height:1.5;">
+  <h1>Asistente de urgencias para autonomos</h1>
+  <p>
+    Servicio de asistente virtual por voz que atiende llamadas cuando el profesional no puede responder.
+    Recoge nombre, telefono, problema, horario y localidad y envia el aviso por WhatsApp para una respuesta rapida.
+  </p>
+</section>
+```
+
+✔ No rompe React
+✔ No cambia diseño
+✔ Google lo indexa
+✔ NO es cloaking (es visible)
+
+---
+
+## 4️⃣ robots.txt y sitemap.xml (desde Express)
+
+### 4.1 Crea estos archivos en `/public`
+
+**robots.txt**
+
+```txt
+User-agent: *
+Allow: /
+
+Sitemap: https://asistentesurgencias.com/sitemap.xml
+```
+
+**sitemap.xml**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://asistentesurgencias.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+```
+
+### 4.2 Servirlos desde Express
+
+```ts
+app.get("/robots.txt", (req, res) =>
+  res.sendFile(path.join(__dirname, "public/robots.txt"))
+);
+
+app.get("/sitemap.xml", (req, res) =>
+  res.sendFile(path.join(__dirname, "public/sitemap.xml"))
+);
+```
+
+---
+
+## 5️⃣ Build correcto en Replit
+
+En `package.json`:
+
+```json
+"scripts": {
+  "build": "vite build",
+  "start": "node server.js"
+}
+```
+
+En Replit:
+
+1. Ejecuta **build**
+2. Luego **start**
+
+---
+
+## 6️⃣ Google Search Console (imprescindible)
+
+* Añade dominio
+* Envia:
+  👉 `https://asistentesurgencias.com/sitemap.xml`
+
+---
+
+# 🧠 CONCLUSIÓN CLARA
+
+* ❌ No necesitas cambiar diseño
+* ❌ No necesitas Next.js
+* ✅ Solo **HTML inicial + texto real + schema**
+* ✅ React sigue funcionando igual
+* ✅ Google ya puede indexar bien
+
+Si quieres, en el siguiente mensaje te digo:
+
+* **qué keywords exactas** atacar
+* o **cómo medir si Google ya lo está leyendo bien**
+
+Dime qué prefieres.
