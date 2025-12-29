@@ -12,6 +12,7 @@ import Politicas from "@/pages/politicas";
 import Terminos from "@/pages/terminos";
 import AvisoLegal from "@/pages/aviso-legal";
 import NotFound from "@/pages/not-found";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 function Router() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <WhatsAppButton />
       </TooltipProvider>
     </QueryClientProvider>
   );
