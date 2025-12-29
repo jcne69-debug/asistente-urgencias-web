@@ -184,7 +184,7 @@ Preferred communication style: Simple, everyday language.
 ## Pending Tasks
 
 - [ ] Publish new pages to Cloudflare Pages (see steps below)
-- [ ] Add "Sectores" links in footer (fontaneros, electricistas, cerrajeros)
+- [x] Add "Sectores" links in footer (6 sectores: fontaneros, electricistas, cerrajeros, climatizacion, cristaleros, calderas)
 - [ ] Connect project to GitHub repository (clean setup, replace ChatGPT integration)
 - [ ] Submit sitemap to Google Search Console once domain propagates
 
@@ -207,5 +207,8 @@ Preferred communication style: Simple, everyday language.
    - https://asistentesurgencias.com/fontaneros
    - https://asistentesurgencias.com/electricistas
    - https://asistentesurgencias.com/cerrajeros
+   - https://asistentesurgencias.com/climatizacion
+   - https://asistentesurgencias.com/cristaleros
+   - https://asistentesurgencias.com/calderas
 
 **Note:** The `_redirects` file in `dist/public` handles SPA routing so all routes work correctly.
