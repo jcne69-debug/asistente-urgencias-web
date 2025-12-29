@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://asistente-urgencias-personal.replit.app/sitemap.xml
+Sitemap: https://asistentesurgencias.com/sitemap.xml
