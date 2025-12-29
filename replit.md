@@ -167,3 +167,21 @@ Preferred communication style: Simple, everyday language.
 - `tailwind.config.ts`: Custom theme with WhatsApp green, design tokens, and animations
 - `drizzle.config.ts`: Database connection and migration configuration
 - `components.json`: Shadcn/ui component configuration (New York style, neutral base color)
+
+## Deployment
+
+**Hosting**
+- Cloudflare Pages: https://asistentesurgenciasweb.pages.dev
+- Custom domain: https://asistentesurgencias.com
+- Build output directory: `dist/public`
+- SPA routing via `_redirects` file
+
+**SEO Files**
+- `robots.txt` and `sitemap.xml` configured for asistentesurgencias.com
+- JSON-LD structured data for LocalBusiness
+- Open Graph and Twitter Card meta tags
+
+## Pending Tasks
+
+- [ ] Connect project to GitHub repository (clean setup, replace ChatGPT integration)
+- [ ] Submit sitemap to Google Search Console once domain propagates
