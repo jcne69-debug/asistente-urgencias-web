@@ -14,6 +14,9 @@ import AvisoLegal from "@/pages/aviso-legal";
 import Fontaneros from "@/pages/fontaneros";
 import Electricistas from "@/pages/electricistas";
 import Cerrajeros from "@/pages/cerrajeros";
+import Climatizacion from "@/pages/climatizacion";
+import Cristaleros from "@/pages/cristaleros";
+import Calderas from "@/pages/calderas";
 import NotFound from "@/pages/not-found";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 
@@ -31,6 +34,9 @@ function Router() {
       <Route path="/fontaneros" component={Fontaneros} />
       <Route path="/electricistas" component={Electricistas} />
       <Route path="/cerrajeros" component={Cerrajeros} />
+      <Route path="/climatizacion" component={Climatizacion} />
+      <Route path="/cristaleros" component={Cristaleros} />
+      <Route path="/calderas" component={Calderas} />
       <Route component={NotFound} />
     </Switch>
   );

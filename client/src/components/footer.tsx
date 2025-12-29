@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div>
             <h3 className="font-semibold text-lg mb-4">Navegación</h3>
             <ul className="space-y-2">
@@ -76,6 +76,66 @@ export function Footer() {
           </div>
 
           <div>
+            <h3 className="font-semibold text-lg mb-4">Sectores</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link 
+                  href="/fontaneros" 
+                  className="text-white/80 hover:text-white transition-colors" 
+                  data-testid="link-footer-fontaneros"
+                >
+                  Fontaneros
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/electricistas" 
+                  className="text-white/80 hover:text-white transition-colors" 
+                  data-testid="link-footer-electricistas"
+                >
+                  Electricistas
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/cerrajeros" 
+                  className="text-white/80 hover:text-white transition-colors" 
+                  data-testid="link-footer-cerrajeros"
+                >
+                  Cerrajeros
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/climatizacion" 
+                  className="text-white/80 hover:text-white transition-colors" 
+                  data-testid="link-footer-climatizacion"
+                >
+                  Climatizacion
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/cristaleros" 
+                  className="text-white/80 hover:text-white transition-colors" 
+                  data-testid="link-footer-cristaleros"
+                >
+                  Cristaleros
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/calderas" 
+                  className="text-white/80 hover:text-white transition-colors" 
+                  data-testid="link-footer-calderas"
+                >
+                  Calderas
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="font-semibold text-lg mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
@@ -84,7 +144,7 @@ export function Footer() {
                   className="text-white/80 hover:text-white transition-colors" 
                   data-testid="link-footer-politicas"
                 >
-                  Política de Privacidad
+                  Politica de Privacidad
                 </Link>
               </li>
               <li>
@@ -93,21 +153,20 @@ export function Footer() {
                   className="text-white/80 hover:text-white transition-colors" 
                   data-testid="link-footer-terminos"
                 >
-                  Términos y Condiciones
+                  Terminos y Condiciones
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/aviso-legal" 
+                  className="text-white/80 hover:text-white transition-colors"
+                  data-testid="link-footer-aviso-legal"
+                >
+                  Aviso Legal
                 </Link>
               </li>
             </ul>
           </div>
-        </div>
-
-        <div>
-          <Link 
-            href="/aviso-legal" 
-            className="text-white/80 hover:text-white transition-colors inline-block"
-            data-testid="link-footer-aviso-legal"
-          >
-            Aviso Legal
-          </Link>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10">
