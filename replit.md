@@ -183,5 +183,29 @@ Preferred communication style: Simple, everyday language.
 
 ## Pending Tasks
 
+- [ ] Publish new pages to Cloudflare Pages (see steps below)
+- [ ] Add "Sectores" links in footer (fontaneros, electricistas, cerrajeros)
 - [ ] Connect project to GitHub repository (clean setup, replace ChatGPT integration)
 - [ ] Submit sitemap to Google Search Console once domain propagates
+
+## How to Publish to Cloudflare Pages
+
+1. **Build the project in Replit:**
+   ```bash
+   npm run build
+   ```
+
+2. **Download the dist/public folder** or push to GitHub
+
+3. **In Cloudflare Pages dashboard:**
+   - Go to your project "asistentesurgenciasweb"
+   - Click "Create deployment" or connect to your GitHub repo
+   - Upload the contents of `dist/public` folder
+   - Wait for deployment to complete
+
+4. **Verify the new pages work:**
+   - https://asistentesurgencias.com/fontaneros
+   - https://asistentesurgencias.com/electricistas
+   - https://asistentesurgencias.com/cerrajeros
+
+**Note:** The `_redirects` file in `dist/public` handles SPA routing so all routes work correctly.
