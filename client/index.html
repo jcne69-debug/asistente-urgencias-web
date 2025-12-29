@@ -3,23 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Asistente-Urgencias Personal para Autónomos | Nunca Pierdas Otra Llamada Importante</title>
-    <meta name="description" content="Servicio profesional de asistente de voz 24/7 para autónomos. Recibe tus llamadas urgentes cuando estás ocupado y obtén resúmenes por WhatsApp. Instalación rápida y sin complicaciones." />
+    <title>Asistente-Urgencias Personal para Autonomos | Nunca Pierdas Otra Llamada Importante</title>
+    <meta name="description" content="Servicio profesional de asistente de voz 24/7 para autonomos. Recibe tus llamadas urgentes cuando estas ocupado y obtén resumenes por WhatsApp. Instalacion rapida y sin complicaciones." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://asistente-urgencias-personal.replit.app/" />
     
-    <meta property="og:title" content="Asistente-Urgencias Personal para Autónomos | Nunca Pierdas Otra Llamada Importante" />
-    <meta property="og:description" content="Tu asistente de voz 24/7 que atiende llamadas urgentes y te envía resúmenes por WhatsApp. Perfecto para autónomos profesionales." />
+    <meta property="og:title" content="Asistente-Urgencias Personal para Autonomos | Nunca Pierdas Otra Llamada Importante" />
+    <meta property="og:description" content="Tu asistente de voz 24/7 que atiende llamadas urgentes y te envia resumenes por WhatsApp. Perfecto para autonomos profesionales." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://asistente-urgencias-personal.replit.app/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Asistente-Urgencias Personal" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Asistente-Urgencias Personal para Autonomos" />
+    <meta name="twitter:description" content="Tu asistente de voz 24/7 que atiende llamadas urgentes y te envia resumenes por WhatsApp." />
+    
+    <meta name="author" content="Juan Carlos Naranjo Espinosa" />
+    <meta name="geo.region" content="ES-V" />
+    <meta name="geo.placename" content="Valencia" />
     
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Asistente-Urgencias Personal para Autonomos",
+      "description": "Servicio de asistente virtual por voz que atiende llamadas urgentes para autonomos y envia los datos por WhatsApp. Disponible 24/7.",
+      "url": "https://asistente-urgencias-personal.replit.app/",
+      "telephone": "+34640397434",
+      "email": "asistentesurgencias@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valencia",
+        "addressCountry": "ES"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Espana"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "sameAs": [
+        "https://wa.me/34640397434"
+      ]
+    }
+    </script>
   </head>
   <body>
+    <noscript>
+      <article style="max-width:800px;margin:40px auto;padding:20px;font-family:system-ui,sans-serif;line-height:1.6;">
+        <h1>Asistente de Urgencias para Autonomos</h1>
+        <p>Servicio profesional de asistente virtual por voz disponible 24 horas, 7 dias a la semana. Atiende tus llamadas cuando no puedes responder, recoge informacion importante del cliente (nombre, telefono, problema, horario y localidad) y te envia un resumen completo por WhatsApp.</p>
+        <h2>Beneficios principales</h2>
+        <ul>
+          <li>Nunca pierdas una llamada importante de un cliente</li>
+          <li>Atencion profesional automatizada las 24 horas</li>
+          <li>Recibe resumenes detallados por WhatsApp</li>
+          <li>Instalacion rapida sin complicaciones tecnicas</li>
+          <li>Ideal para fontaneros, electricistas, cerrajeros y otros profesionales autonomos</li>
+        </ul>
+        <p>Contacto: <a href="tel:+34640397434">+34 640 397 434</a> | <a href="mailto:asistentesurgencias@gmail.com">asistentesurgencias@gmail.com</a></p>
+      </article>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-<!-- VAPI VOICE WIDGET - Botón verde flotante con texto "Pruébame" -->
+<!-- VAPI VOICE WIDGET - Boton verde flotante con texto "Pruebame" -->
 <script>
   var vapiInstance = null;
   const assistant = "1fd64959-63b1-41ba-ac00-9417fbfdb4f6";
@@ -34,7 +88,7 @@
     idle: {
       color: "rgb(37, 211, 102)",
       type: "pill",
-      title: "Pruébame",
+      title: "Pruebame",
       subtitle: "",
       icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone.svg"
     },
@@ -71,7 +125,7 @@
         config: buttonConfig
       });
 
-      // Forzar que el widget sea flotante después de que se cree
+      // Forzar que el widget sea flotante despues de que se cree
       setTimeout(function() {
         var vapiContainer = document.querySelector('[id^="vapi"]') || 
                            document.querySelector('[class*="vapi"]') ||

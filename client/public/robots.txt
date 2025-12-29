@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asistente-urgencias-personal.replit.app/sitemap.xml
