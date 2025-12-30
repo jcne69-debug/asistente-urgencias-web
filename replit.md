@@ -185,8 +185,9 @@ Preferred communication style: Simple, everyday language.
 
 - [ ] Publish new pages to Cloudflare Pages (see steps below)
 - [x] Add "Sectores" links in footer (6 sectores: fontaneros, electricistas, cerrajeros, climatizacion, cristaleros, calderas)
-- [ ] Connect project to GitHub repository (clean setup, replace ChatGPT integration)
+- [x] Connect project to GitHub repository: https://github.com/jcne69-debug/asistente-urgencias-web
 - [ ] Submit sitemap to Google Search Console once domain propagates
+- [ ] Connect Cloudflare Pages to GitHub for automatic deployments
 
 ## How to Publish to Cloudflare Pages
 
