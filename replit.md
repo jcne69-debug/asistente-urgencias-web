@@ -183,11 +183,11 @@ Preferred communication style: Simple, everyday language.
 
 ## Pending Tasks
 
-- [ ] Publish new pages to Cloudflare Pages (see steps below)
+- [x] Publish new pages to Cloudflare Pages
 - [x] Add "Sectores" links in footer (6 sectores: fontaneros, electricistas, cerrajeros, climatizacion, cristaleros, calderas)
 - [x] Connect project to GitHub repository: https://github.com/jcne69-debug/asistente-urgencias-web
-- [ ] Submit sitemap to Google Search Console once domain propagates
-- [ ] Connect Cloudflare Pages to GitHub for automatic deployments
+- [ ] Submit sitemap to Google Search Console (https://search.google.com/search-console)
+- [x] Connect Cloudflare Pages to GitHub for automatic deployments
 
 ## How to Publish to Cloudflare Pages
 
