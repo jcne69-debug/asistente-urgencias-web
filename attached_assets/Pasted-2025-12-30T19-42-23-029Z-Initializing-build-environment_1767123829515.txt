@@ -1,0 +1,96 @@
+2025-12-30T19:42:23.029Z	Initializing build environment...
+2025-12-30T19:42:23.029Z	Initializing build environment...
+2025-12-30T19:42:24.588Z	Success: Finished initializing build environment
+2025-12-30T19:42:25.238Z	Cloning repository...
+2025-12-30T19:42:26.804Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-12-30T19:42:26.806Z	Restoring from dependencies cache
+2025-12-30T19:42:26.809Z	Restoring from build output cache
+2025-12-30T19:42:27.134Z	Installing project dependencies: npm clean-install --progress=false
+2025-12-30T19:42:33.363Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2025-12-30T19:42:33.442Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2025-12-30T19:42:40.394Z	
+2025-12-30T19:42:40.394Z	added 519 packages, and audited 520 packages in 13s
+2025-12-30T19:42:40.394Z	
+2025-12-30T19:42:40.394Z	66 packages are looking for funding
+2025-12-30T19:42:40.394Z	  run `npm fund` for details
+2025-12-30T19:42:40.421Z	
+2025-12-30T19:42:40.421Z	9 vulnerabilities (3 low, 5 moderate, 1 high)
+2025-12-30T19:42:40.421Z	
+2025-12-30T19:42:40.421Z	To address issues that do not require attention, run:
+2025-12-30T19:42:40.422Z	  npm audit fix
+2025-12-30T19:42:40.422Z	
+2025-12-30T19:42:40.422Z	To address all issues (including breaking changes), run:
+2025-12-30T19:42:40.422Z	  npm audit fix --force
+2025-12-30T19:42:40.422Z	
+2025-12-30T19:42:40.422Z	Run `npm audit` for details.
+2025-12-30T19:42:40.646Z	Executing user build command: npm run build
+2025-12-30T19:42:41.425Z	
+2025-12-30T19:42:41.426Z	> rest-express@1.0.0 build
+2025-12-30T19:42:41.426Z	> vite build && esbuild server/index-prod.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/index.js
+2025-12-30T19:42:41.426Z	
+2025-12-30T19:42:41.722Z	vite v5.4.20 building for production...
+2025-12-30T19:42:41.819Z	transforming...
+2025-12-30T19:42:43.238Z	
+2025-12-30T19:42:43.239Z	A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+2025-12-30T19:42:48.048Z	✓ 1851 modules transformed.
+2025-12-30T19:42:48.506Z	rendering chunks...
+2025-12-30T19:42:48.521Z	computing gzip size...
+2025-12-30T19:43:01.095Z	../dist/public/index.html                                                     6.35 kB │ gzip:   2.37 kB
+2025-12-30T19:43:01.095Z	../dist/public/assets/whatsapp_urgent_call_summary-DnE3X-Ed.png             723.15 kB
+2025-12-30T19:43:01.095Z	../dist/public/assets/incoming_call_interface_screen-DGOqPLw3.png           911.56 kB
+2025-12-30T19:43:01.095Z	../dist/public/assets/hispanic_tradesperson_answering_phone-CSJDgYbH.png  1,311.57 kB
+2025-12-30T19:43:01.095Z	../dist/public/assets/index-CPvCSZUa.css                                     94.81 kB │ gzip:  14.41 kB
+2025-12-30T19:43:01.095Z	../dist/public/assets/index-JOznzsbA.js                                     540.67 kB │ gzip: 159.53 kB
+2025-12-30T19:43:01.095Z	
+2025-12-30T19:43:01.095Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2025-12-30T19:43:01.095Z	- Using dynamic import() to code-split the application
+2025-12-30T19:43:01.096Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-12-30T19:43:01.096Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-12-30T19:43:01.096Z	✓ built in 19.34s
+2025-12-30T19:43:01.182Z	
+2025-12-30T19:43:01.182Z	  dist/index.js  6.5kb
+2025-12-30T19:43:01.183Z	
+2025-12-30T19:43:01.183Z	⚡ Done in 8ms
+2025-12-30T19:43:01.196Z	Success: Build command completed
+2025-12-30T19:43:01.357Z	Executing user deploy command: npx wrangler deploy
+2025-12-30T19:43:02.437Z	npm warn exec The following package was not found and will be installed: wrangler@4.54.0
+2025-12-30T19:43:11.165Z	
+2025-12-30T19:43:11.167Z	 ⛅️ wrangler 4.54.0
+2025-12-30T19:43:11.167Z	───────────────────
+2025-12-30T19:43:11.181Z	
+2025-12-30T19:43:11.253Z	✘ [ERROR] Missing entry-point to Worker script or to assets directory
+2025-12-30T19:43:11.253Z	
+2025-12-30T19:43:11.253Z	  
+2025-12-30T19:43:11.253Z	  If there is code to deploy, you can either:
+2025-12-30T19:43:11.253Z	  - Specify an entry-point to your Worker script via the command line (ex: `npx wrangler deploy src/index.ts`)
+2025-12-30T19:43:11.253Z	  - Or create a "wrangler.jsonc" file containing:
+2025-12-30T19:43:11.253Z	  
+2025-12-30T19:43:11.253Z	  ```
+2025-12-30T19:43:11.253Z	  {
+2025-12-30T19:43:11.253Z	    "name": "worker-name",
+2025-12-30T19:43:11.253Z	    "compatibility_date": "2025-12-30",
+2025-12-30T19:43:11.253Z	    "main": "src/index.ts"
+2025-12-30T19:43:11.253Z	  }
+2025-12-30T19:43:11.253Z	  ```
+2025-12-30T19:43:11.253Z	  
+2025-12-30T19:43:11.254Z	  
+2025-12-30T19:43:11.254Z	  If are uploading a directory of assets, you can either:
+2025-12-30T19:43:11.254Z	  - Specify the path to the directory of assets via the command line: (ex: `npx wrangler deploy --assets=./dist`)
+2025-12-30T19:43:11.254Z	  - Or create a "wrangler.jsonc" file containing:
+2025-12-30T19:43:11.254Z	  
+2025-12-30T19:43:11.254Z	  ```
+2025-12-30T19:43:11.254Z	  {
+2025-12-30T19:43:11.254Z	    "name": "worker-name",
+2025-12-30T19:43:11.254Z	    "compatibility_date": "2025-12-30",
+2025-12-30T19:43:11.254Z	    "assets": {
+2025-12-30T19:43:11.255Z	      "directory": "./dist"
+2025-12-30T19:43:11.255Z	    }
+2025-12-30T19:43:11.255Z	  }
+2025-12-30T19:43:11.256Z	  ```
+2025-12-30T19:43:11.256Z	  
+2025-12-30T19:43:11.256Z	
+2025-12-30T19:43:11.256Z	
+2025-12-30T19:43:11.272Z	
+2025-12-30T19:43:11.273Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2025-12-30T19:43:11.288Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2025-12-30_19-43-10_526.log"
+2025-12-30T19:43:11.417Z	Failed: error occurred while running deploy command
