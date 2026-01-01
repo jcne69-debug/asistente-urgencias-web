@@ -146,7 +146,7 @@ export default function Contacto() {
                             <FormLabel>Teléfono</FormLabel>
                             <FormControl>
                               <Input
-                                placeholder="+34 600 123 456"
+                                placeholder="600 123 456"
                                 {...field}
                                 data-testid="input-phone"
                                 disabled={mutation.isPending}
