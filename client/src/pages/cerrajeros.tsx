@@ -60,7 +60,7 @@ export default function Cerrajeros() {
             Tu asistente de voz atiende clientes 24/7 y te envia la informacion por WhatsApp.
           </p>
           <p className="text-base text-white/80">
-            Servicio de contestador inteligente para cerrajeros autonomos - aperturas urgentes 24 horas
+            Servicio de contestador inteligente para cerrajeros autonomos en Valencia, Comunidad Valenciana y toda Espana - aperturas urgentes 24 horas
           </p>
         </div>
       </section>

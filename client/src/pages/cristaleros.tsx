@@ -60,7 +60,7 @@ export default function Cristaleros() {
             Tu asistente de voz atiende clientes 24/7 y te envia los datos por WhatsApp.
           </p>
           <p className="text-base text-white/80">
-            Servicio de atencion telefonica para cristaleros y cristalerias de urgencias
+            Servicio de atencion telefonica para cristaleros y cristalerias de urgencias en Valencia, Comunidad Valenciana y toda Espana
           </p>
         </div>
       </section>

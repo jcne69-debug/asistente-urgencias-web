@@ -60,7 +60,7 @@ export default function Calderas() {
             Tu asistente de voz atiende clientes 24/7 y te envia los datos por WhatsApp.
           </p>
           <p className="text-base text-white/80">
-            Servicio de atencion telefonica para tecnicos de calderas y calefaccion
+            Servicio de atencion telefonica para tecnicos de calderas y calefaccion en Valencia, Comunidad Valenciana y toda Espana
           </p>
         </div>
       </section>

@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { CheckCircle2 } from "lucide-react";
-import whatsappMockup from "@assets/generated_images/whatsapp_urgent_call_summary.png";
-import callScreen from "@assets/generated_images/incoming_call_interface_screen.png";
+import whatsappMockup from "@assets/generated_images/whatsapp_urgent_call_summary_optimized.png";
+import callScreen from "@assets/generated_images/incoming_call_interface_screen_optimized.png";
 
 export default function Servicios() {
   const assistantTypes = [

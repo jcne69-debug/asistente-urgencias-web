@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/hispanic_tradesperson_answering_phone.png";
+import heroImage from "@assets/generated_images/hispanic_tradesperson_answering_phone_optimized.png";
 
 export default function Home() {
   const steps = [

@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useEffect } from "react";
 
 export default function FAQ() {
   const faqs = [
@@ -59,6 +60,39 @@ export default function FAQ() {
         "Nuestro equipo de soporte está disponible para resolver cualquier incidencia relacionada con nuestro sistema. Sin embargo, ten en cuenta que dependemos de plataformas externas (telefonía, WhatsApp, servidores de terceros) que pueden experimentar interrupciones ajenas a nuestro control. Hacemos todo lo posible para mantener el servicio activo, pero no podemos garantizar disponibilidad del 100% cuando el problema proviene de estos proveedores externos.",
     },
   ];
+
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqSchema);
+    script.id = 'faq-schema';
+    
+    const existingScript = document.getElementById('faq-schema');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    document.head.appendChild(script);
+
+    return () => {
+      const scriptToRemove = document.getElementById('faq-schema');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, []);
 
   return (
     <Layout>

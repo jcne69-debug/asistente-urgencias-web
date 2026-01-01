@@ -60,7 +60,7 @@ export default function Fontaneros() {
             Tu asistente de voz atiende clientes 24/7 y te envia los datos por WhatsApp.
           </p>
           <p className="text-base text-white/80">
-            Servicio de atencion telefonica automatizada para fontaneros autonomos en toda Espana
+            Servicio de atencion telefonica automatizada para fontaneros autonomos en Valencia, Comunidad Valenciana y toda Espana
           </p>
         </div>
       </section>

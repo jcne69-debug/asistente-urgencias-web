@@ -60,7 +60,7 @@ export default function Electricistas() {
             Tu asistente de voz atiende clientes 24/7 y te envia los datos por WhatsApp.
           </p>
           <p className="text-base text-white/80">
-            Secretaria virtual para electricistas autonomos - atencion telefonica automatizada
+            Secretaria virtual para electricistas autonomos en Valencia, Comunidad Valenciana y toda Espana
           </p>
         </div>
       </section>
