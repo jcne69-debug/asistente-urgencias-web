@@ -1,0 +1,79 @@
+2026-01-01T20:37:59.659281Z	Cloning repository...
+2026-01-01T20:38:00.433061Z	From https://github.com/jcne69-debug/asistente-urgencias-web
+2026-01-01T20:38:00.433521Z	 * branch            412c9277acbd7f754e34c0c7e801719a9e21c613 -> FETCH_HEAD
+2026-01-01T20:38:00.433624Z	
+2026-01-01T20:38:00.505785Z	HEAD is now at 412c927 Add instructions to resolve Git push errors
+2026-01-01T20:38:00.506236Z	
+2026-01-01T20:38:00.586671Z	
+2026-01-01T20:38:00.587244Z	Using v2 root directory strategy
+2026-01-01T20:38:00.60966Z	Success: Finished cloning repository files
+2026-01-01T20:38:02.295195Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-01-01T20:38:02.295745Z	
+2026-01-01T20:38:03.398996Z	No wrangler.toml file found. Continuing.
+2026-01-01T20:38:03.469993Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-01-01T20:38:03.470864Z	Installing project dependencies: npm clean-install --progress=false
+2026-01-01T20:38:07.779931Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-01-01T20:38:07.803742Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-01-01T20:38:12.603945Z	
+2026-01-01T20:38:12.604214Z	added 519 packages, and audited 520 packages in 9s
+2026-01-01T20:38:12.60461Z	
+2026-01-01T20:38:12.604725Z	66 packages are looking for funding
+2026-01-01T20:38:12.604829Z	  run `npm fund` for details
+2026-01-01T20:38:12.633339Z	
+2026-01-01T20:38:12.633793Z	12 vulnerabilities (3 low, 5 moderate, 4 high)
+2026-01-01T20:38:12.633978Z	
+2026-01-01T20:38:12.634561Z	To address issues that do not require attention, run:
+2026-01-01T20:38:12.634717Z	  npm audit fix
+2026-01-01T20:38:12.635136Z	
+2026-01-01T20:38:12.635221Z	To address all issues (including breaking changes), run:
+2026-01-01T20:38:12.635302Z	  npm audit fix --force
+2026-01-01T20:38:12.635436Z	
+2026-01-01T20:38:12.635543Z	Run `npm audit` for details.
+2026-01-01T20:38:12.66111Z	Executing user command: npm run build
+2026-01-01T20:38:13.029258Z	
+2026-01-01T20:38:13.029484Z	> rest-express@1.0.0 build
+2026-01-01T20:38:13.029598Z	> vite build && esbuild server/index-prod.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/index.js
+2026-01-01T20:38:13.029701Z	
+2026-01-01T20:38:13.295804Z	[36mvite v5.4.20 [32mbuilding for production...[36m[39m
+2026-01-01T20:38:13.359958Z	transforming...
+2026-01-01T20:38:14.390622Z	
+2026-01-01T20:38:14.390877Z	A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+2026-01-01T20:38:17.441889Z	[32m✓[39m 1851 modules transformed.
+2026-01-01T20:38:17.715473Z	rendering chunks...
+2026-01-01T20:38:17.728629Z	computing gzip size...
+2026-01-01T20:38:17.743832Z	[2m../dist/public/[22m[32mindex.html                                                           [39m[1m[2m  6.66 kB[22m[1m[22m[2m │ gzip:   2.51 kB[22m
+2026-01-01T20:38:17.744106Z	[2m../dist/public/[22m[2massets/[22m[32mhispanic_tradesperson_answering_phone_optimized-CXlzn3w5.png  [39m[1m[2m452.92 kB[22m[1m[22m
+2026-01-01T20:38:17.744493Z	[2m../dist/public/[22m[2massets/[22m[32mwhatsapp_urgent_call_summary_optimized-Dd7QVMOe.png           [39m[1m[2m504.05 kB[22m[1m[22m
+2026-01-01T20:38:17.74465Z	[2m../dist/public/[22m[2massets/[22m[32mincoming_call_interface_screen_optimized-DmZaHZMT.png         [39m[1m[2m588.06 kB[22m[1m[22m
+2026-01-01T20:38:17.744785Z	[2m../dist/public/[22m[2massets/[22m[35mindex-BAj3ZN3p.css                                            [39m[1m[2m 94.69 kB[22m[1m[22m[2m │ gzip:  14.39 kB[22m
+2026-01-01T20:38:17.744923Z	[2m../dist/public/[22m[2massets/[22m[36mindex-DHwwzs4l.js                                             [39m[1m[33m541.29 kB[39m[22m[2m │ gzip: 159.71 kB[22m
+2026-01-01T20:38:17.745058Z	[32m✓ built in 4.42s[39m
+2026-01-01T20:38:17.745185Z	[33m
+2026-01-01T20:38:17.745319Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2026-01-01T20:38:17.745489Z	- Using dynamic import() to code-split the application
+2026-01-01T20:38:17.745598Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-01-01T20:38:17.745712Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2026-01-01T20:38:17.798269Z	
+2026-01-01T20:38:17.798629Z	  dist/index.js  6.5kb
+2026-01-01T20:38:17.798799Z	
+2026-01-01T20:38:17.798978Z	⚡ Done in 8ms
+2026-01-01T20:38:17.817365Z	Finished
+2026-01-01T20:38:18.764629Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-01-01T20:38:18.765256Z	
+2026-01-01T20:38:19.849533Z	No wrangler.toml file found. Continuing.
+2026-01-01T20:38:19.85027Z	Note: No functions dir at /functions found. Skipping.
+2026-01-01T20:38:19.850516Z	Validating asset output directory
+2026-01-01T20:38:22.515632Z	Deploying your site to Cloudflare's global network...
+2026-01-01T20:38:23.631973Z	Parsed 0 valid redirect rules.
+2026-01-01T20:38:23.632405Z	Found invalid redirect lines:
+2026-01-01T20:38:23.632517Z	  - #1: /* /index.html 200
+2026-01-01T20:38:23.632671Z	    Infinite loop detected in this rule and has been ignored. This will cause a redirect to strip `.html` or `/index` and end up triggering this rule again. Please fix or remove this rule to silence this warning.
+2026-01-01T20:38:24.935861Z	Uploading... (2/9)
+2026-01-01T20:38:25.865093Z	Uploading... (4/9)
+2026-01-01T20:38:26.00702Z	Uploading... (7/9)
+2026-01-01T20:38:26.257756Z	Uploading... (9/9)
+2026-01-01T20:38:26.258092Z	✨ Success! Uploaded 7 files (2 already uploaded) (1.76 sec)
+2026-01-01T20:38:26.258233Z	
+2026-01-01T20:38:26.731686Z	✨ Upload complete!
+2026-01-01T20:38:30.572147Z	Success: Assets published!
+2026-01-01T20:38:32.424437Z	Success: Your site was deployed!
