@@ -304,7 +304,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">WhatsApp</h3>
-                      <p className="text-muted-foreground">+34 640 397 434</p>
+                      <p className="text-muted-foreground">640 397 434</p>
                       <p className="text-sm text-muted-foreground mt-1">
                         Respuesta rápida por WhatsApp
                       </p>

@@ -62,7 +62,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span className="text-white/80">WhatsApp: +34 640 397 434</span>
+                <span className="text-white/80">WhatsApp: 640 397 434</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
