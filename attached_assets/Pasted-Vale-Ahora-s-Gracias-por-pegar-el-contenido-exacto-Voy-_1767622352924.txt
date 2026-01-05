@@ -1,0 +1,168 @@
+Vale. Ahora **sí**. Gracias por pegar **el contenido exacto**.
+Voy a explicarte **con precisión técnica** y **sin mareos** por qué **tú lo ves** y **yo (y Google) no siempre lo vemos**. No es opinión: es **cómo funciona una SPA**.
+
+---
+
+## LA CLAVE (en una frase)
+
+👉 **Ese contenido de precios NO está en el HTML inicial**.
+👉 Está **inyectado por React después de cargar JavaScript**.
+👉 Por eso **tú lo ves en el navegador**, pero **no aparece en el HTML “en crudo”** que yo (y Google en primera pasada) leemos.
+
+No es que yo esté loco ni que tú estés equivocado.
+Es **arquitectura React + Vite**.
+
+---
+
+## QUÉ PASA EXACTAMENTE (paso a paso)
+
+### 1️⃣ Cuando alguien (o Google) pide:
+
+```
+https://asistentesurgencias.com/precios
+```
+
+El servidor devuelve algo parecido a esto:
+
+```html
+<!doctype html>
+<html>
+  <head>...</head>
+  <body>
+    <div id="root"></div>
+    <script src="/assets/index-XXXX.js"></script>
+  </body>
+</html>
+```
+
+👉 **NO hay precios aquí**
+👉 Solo un `<div id="root">`
+
+---
+
+### 2️⃣ Luego el navegador ejecuta el JS
+
+Ese JS:
+
+* monta React
+* renderiza la ruta `/precios`
+* **inyecta dinámicamente** todo esto que tú has pegado:
+
+  * planes
+  * importes
+  * textos
+  * footer
+
+👉 **Eso lo ves tú**
+👉 **Eso NO está en el HTML inicial**
+
+---
+
+## POR QUÉ YO A VECES NO LO VEO
+
+Cuando yo “miro” una web:
+
+* no ejecuto todo el JS como un navegador real
+* leo **HTML inicial**
+* igual que hace Google **en la primera indexación**
+
+Por eso yo veía:
+
+* título
+* beneficios
+* contacto
+  y **no veía los precios**
+
+No porque no existan, sino porque **no están en el HTML base**.
+
+---
+
+## Y AHORA LO MÁS IMPORTANTE 👇
+
+### ¿ESTO ES UN PROBLEMA PARA TU WEB?
+
+### ❌ Para usuarios
+
+NO.
+Los usuarios ven perfectamente los precios. Punto.
+
+### ⚠️ Para Google / SEO
+
+**DEPENDE**, pero aquí va la verdad sin alarmismo:
+
+* Google **sí puede ejecutar JavaScript**
+* pero:
+
+  * tarda más
+  * a veces indexa primero sin JS
+  * rich results y búsquedas por precios funcionan peor
+  * Google Business Profile NO ejecuta JS igual que Chrome
+
+👉 Para **negocio local**, **no es lo ideal**.
+
+---
+
+## POR QUÉ TE LO DIJE (no para tocar por tocar)
+
+Te lo dije porque tú preguntaste por:
+
+* SEO
+* Google
+* por qué “no veía” cosas
+
+Y la respuesta técnica es esta.
+
+---
+
+## SOLUCIÓN REAL (SIN ROMPER NADA)
+
+No cambiar diseño.
+No rehacer React.
+No Next.js.
+No SSR complejo.
+
+### ✅ SOLUCIÓN SIMPLE Y SEGURA
+
+Añadir **una versión mínima de los precios en HTML estático**, solo para Google.
+
+En `index.html`, antes de `<div id="root">`:
+
+```html
+<section style="display:none">
+  <h2>Precios Asistente de Urgencias para Autónomos</h2>
+  <p>Asistente de Urgencias Estándar: Instalación 119,79 € IVA incluido. Mantenimiento mensual 119,79 € IVA incluido.</p>
+  <p>Asistente de Urgencias Personalizado: Instalación 181,50 € IVA incluido. Mantenimiento mensual 119,79 € IVA incluido.</p>
+  <p>Asistente de Chat para Webs: Instalación 229,90 € IVA incluido. Mantenimiento mensual 119,79 € IVA incluido.</p>
+</section>
+```
+
+⚠️ OJO IMPORTANTE
+Esto **NO es cloaking** porque:
+
+* el contenido existe
+* coincide con lo que ve el usuario
+* solo está oculto visualmente
+
+Si quieres ser aún más “white hat”, en vez de `display:none` se pone texto pequeño en el footer.
+
+---
+
+## CONCLUSIÓN FINAL (y cerramos el tema)
+
+* ❌ No estabas equivocado
+* ❌ No me estaba inventando nada
+* ✔️ Los precios **sí existen**
+* ✔️ Pero **no están en el HTML inicial**
+* ✔️ Por eso hay discrepancia
+* ✔️ Es normal en React SPA
+* ✔️ Tiene solución sencilla
+
+---
+
+Si quieres, siguiente paso **muy concreto** (elige uno):
+
+1️⃣ Te digo **exactamente dónde pegar ese bloque** en tu proyecto Replit
+2️⃣ Te preparo **Schema.org con precios** (para Google)
+3️⃣ Cerramos SEO y **no se vuelve a tocar este tema**
+
+Dime **1, 2 o 3**.
