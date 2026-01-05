@@ -72,9 +72,24 @@ export default function Precios() {
         </div>
       </section>
 
+      {/* Banner Oferta de Lanzamiento */}
+      <section className="bg-gradient-to-r from-green-600 to-green-500 py-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <p className="text-2xl md:text-3xl font-bold mb-2">
+            Oferta de Lanzamiento
+          </p>
+          <p className="text-lg md:text-xl font-semibold mb-1">
+            Primer mes de mantenimiento GRATIS
+          </p>
+          <p className="text-sm md:text-base opacity-90">
+            Ahorra 119,79 € · Solo por tiempo limitado
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-6">
             {plans.map((plan, index) => (
               <Card
                 key={index}
@@ -98,7 +113,10 @@ export default function Precios() {
                     <p className="text-2xl font-bold text-primary">{plan.installation}€</p>
                     <p className="text-xs text-muted-foreground font-bold">IVA incluido</p>
                   </div>
-                  <div className="bg-card p-4 rounded-lg">
+                  <div className="bg-card p-4 rounded-lg relative">
+                    <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      OFERTA
+                    </span>
                     <div className="flex items-center gap-1 mb-1">
                       <p className="text-sm text-muted-foreground">Mantenimiento Mensual</p>
                       {index < 2 && (
@@ -138,8 +156,12 @@ export default function Precios() {
                         </Dialog>
                       )}
                     </div>
-                    <p className="text-2xl font-bold text-primary">{plan.monthly}€</p>
-                    <p className="text-xs text-muted-foreground font-bold">IVA incluido</p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-lg text-muted-foreground line-through">{plan.monthly}€</p>
+                      <p className="text-2xl font-bold text-green-600">0€</p>
+                      <span className="text-sm text-green-600 font-semibold">el primer mes</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Oferta de lanzamiento · sin permanencia</p>
                   </div>
                 </div>
 
@@ -155,6 +177,10 @@ export default function Precios() {
               </Card>
             ))}
           </div>
+
+          <p className="text-center text-sm text-muted-foreground mb-8">
+            Promoción válida para nuevas altas. Sin permanencia. Cancela cuando quieras.
+          </p>
 
           <Card className="p-8 bg-primary/5 border-2 border-primary/20 mb-12">
             <div className="text-center">
