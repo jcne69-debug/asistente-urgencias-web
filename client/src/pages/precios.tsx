@@ -123,32 +123,29 @@ export default function Precios() {
                         <Dialog>
                           <DialogTrigger asChild>
                             <button
-                              className="text-muted-foreground hover:text-primary transition-colors"
+                              className="flex items-center gap-1 text-primary hover:text-primary/80 transition-colors text-xs font-medium underline underline-offset-2"
                               data-testid={`button-info-mantenimiento-${index}`}
                             >
                               <Info className="w-4 h-4" />
+                              <span>Ver condiciones</span>
                             </button>
                           </DialogTrigger>
                           <DialogContent className="sm:max-w-md">
                             <DialogHeader>
-                              <DialogTitle>Sobre el coste de mantenimiento</DialogTitle>
-                              <DialogDescription className="pt-4 space-y-3">
+                              <DialogTitle className="text-xl">Sobre el coste de mantenimiento</DialogTitle>
+                              <DialogDescription className="pt-4 space-y-4 text-base">
                                 <p>
-                                  El precio base de mantenimiento es de <strong>149€ + IVA/mes</strong> e incluye 
-                                  un volumen normal de llamadas y mensajes de WhatsApp.
+                                  El precio base de mantenimiento es de <strong className="text-primary">149€ + IVA/mes</strong> e incluye 
+                                  el uso habitual del asistente de voz y el envío de mensajes por WhatsApp, 
+                                  suficiente para la mayoría de negocios.
                                 </p>
                                 <p>
-                                  Si tu negocio recibe un volumen muy alto de llamadas, el coste de 
-                                  mantenimiento puede variar ligeramente para cubrir los gastos operativos 
-                                  adicionales (minutos de voz, mensajes enviados, etc.).
+                                  Si el volumen de llamadas supera las <strong>80 llamadas mensuales</strong>, 
+                                  el precio podrá ajustarse para cubrir el mayor uso del servicio.
                                 </p>
-                                <p>
-                                  En estos casos, te informaremos con antelacion y acordaremos juntos 
-                                  la mejor solucion para tu negocio.
-                                </p>
-                                <p className="text-sm text-muted-foreground">
-                                  La mayoria de nuestros clientes se mantienen dentro del precio base sin 
-                                  costes adicionales.
+                                <p className="bg-primary/10 p-3 rounded-lg border-l-4 border-primary">
+                                  En ese caso, siempre te avisaremos con antelación y lo revisaremos contigo, 
+                                  <strong> sin cambios automáticos</strong>.
                                 </p>
                               </DialogDescription>
                             </DialogHeader>
