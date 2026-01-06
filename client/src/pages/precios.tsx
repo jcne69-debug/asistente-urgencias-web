@@ -153,12 +153,12 @@ export default function Precios() {
                         </Dialog>
                       )}
                     </div>
-                    <div className="flex items-center gap-2">
-                      <p className="text-lg text-muted-foreground line-through">{plan.monthly}€</p>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <p className="text-lg text-muted-foreground line-through">{plan.monthly}€ + IVA</p>
                       <p className="text-2xl font-bold text-green-600">0€</p>
                       <span className="text-sm text-green-600 font-semibold">el primer mes</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Oferta de lanzamiento · sin permanencia</p>
+                    <p className="text-xs text-muted-foreground mt-1">Después {plan.monthly}€ + IVA/mes · Sin permanencia</p>
                   </div>
                 </div>
 
