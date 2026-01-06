@@ -19,24 +19,24 @@ export default function Precios() {
       icon: "📱",
       title: "Asistente de Urgencias - Estándar",
       description: "Solución completa con configuración estándar",
-      installation: "119,79",
-      monthly: "119,79",
+      installation: "99",
+      monthly: "149",
       badge: "Recomendado",
     },
     {
       icon: "✨",
       title: "Asistente de Urgencias - Personalizado",
       description: "Completamente adaptado a tu negocio",
-      installation: "181,50",
-      monthly: "119,79",
+      installation: "150",
+      monthly: "149",
       badge: "Premium",
     },
     {
       icon: "💻",
       title: "Asistente de Chat para Webs",
       description: "Widget inteligente para tu sitio web",
-      installation: "229,90",
-      monthly: "119,79",
+      installation: "190",
+      monthly: "149",
       badge: "Nuevo",
     },
   ];
@@ -82,7 +82,7 @@ export default function Precios() {
             Primer mes de mantenimiento GRATIS
           </p>
           <p className="text-sm md:text-base opacity-90">
-            Ahorra 119,79 € · Solo por tiempo limitado
+            Ahorra 149€ + IVA · Solo por tiempo limitado
           </p>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function Precios() {
                   <div className="bg-card p-4 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Instalación</p>
                     <p className="text-2xl font-bold text-primary">{plan.installation}€</p>
-                    <p className="text-xs text-muted-foreground font-bold">IVA incluido</p>
+                    <p className="text-xs text-muted-foreground font-bold">+ IVA</p>
                   </div>
                   <div className="bg-card p-4 rounded-lg relative">
                     <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -134,7 +134,7 @@ export default function Precios() {
                               <DialogTitle>Sobre el coste de mantenimiento</DialogTitle>
                               <DialogDescription className="pt-4 space-y-3">
                                 <p>
-                                  El precio base de mantenimiento es de <strong>119,79€/mes</strong> e incluye 
+                                  El precio base de mantenimiento es de <strong>149€ + IVA/mes</strong> e incluye 
                                   un volumen normal de llamadas y mensajes de WhatsApp.
                                 </p>
                                 <p>
